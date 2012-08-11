@@ -1,4 +1,6 @@
 RailsApp::Application.routes.draw do
+  resources :properties
+
   authenticated :user do
     root :to => 'home#index'
   end

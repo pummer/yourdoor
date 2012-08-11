@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   
   validates_uniqueness_of :email, :case_sensitive => false
+
+  has_many :i_apps
 end
