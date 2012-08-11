@@ -1,4 +1,4 @@
-test:
+test: &test
   adapter: sqlite3
   database: db/test.sqlite3
   pool: 5
@@ -19,3 +19,6 @@ production:
   username: <%=ENV['OPENSHIFT_DB_USERNAME']%>
   password: <%=ENV['OPENSHIFT_DB_PASSWORD']%>
   socket:   <%=ENV['OPENSHIFT_DB_SOCKET']%>
+
+cucumber:
+  <<: *test
