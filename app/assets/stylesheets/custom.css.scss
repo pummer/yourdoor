@@ -1,0 +1,19 @@
+[class^="icon-"], [class*=" icon-"] {
+    background-repeat: no-repeat;
+                background-image: url("/assets/glyphicons-halflings.png");
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    width: 14px;
+                margin:2px 0px;
+}
+[class^="icon-"]:last-child,
+[class*=" icon-"]:last-child {
+  *margin-left: 0;
+}
+
+body {
+	padding-bottom: 40px;
+	padding-top: 60px;
+}
