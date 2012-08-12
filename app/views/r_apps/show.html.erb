@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Submission date:</b>
+  <%= @r_app.submission_date %>
+</p>
+
+<p>
+  <b>Property:</b>
+  <%= @r_app.property %>
+</p>
+
+<p>
+  <b>Landlord:</b>
+  <%= @r_app.landlord %>
+</p>
+
+<p>
+  <b>Realtor:</b>
+  <%= @r_app.realtor %>
+</p>
+
+
+<%= link_to 'Edit', edit_r_app_path(@r_app) %> |
+<%= link_to 'Back', r_apps_path %>

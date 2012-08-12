@@ -1,0 +1,2 @@
+module RAppsHelper
+end

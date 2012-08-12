@@ -1,0 +1,33 @@
+<%= form_for(@r_app) do |f| %>
+  <% if @r_app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@r_app.errors.count, "error") %> prohibited this r_app from being saved:</h2>
+
+      <ul>
+      <% @r_app.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :submission_date %><br />
+    <%= f.date_select :submission_date %>
+  </div>
+  <div class="field">
+    <%= f.label :property %><br />
+    <%= f.number_field :property %>
+  </div>
+  <div class="field">
+    <%= f.label :landlord %><br />
+    <%= f.number_field :landlord %>
+  </div>
+  <div class="field">
+    <%= f.label :realtor %><br />
+    <%= f.number_field :realtor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

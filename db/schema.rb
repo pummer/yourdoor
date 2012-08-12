@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120812030059) do
+ActiveRecord::Schema.define(:version => 20120812150412) do
 
   create_table "emergency_contacts", :force => true do |t|
     t.string   "name"
@@ -127,6 +127,25 @@ ActiveRecord::Schema.define(:version => 20120812030059) do
     t.string   "zip"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "r_app_ooglers", :force => true do |t|
+    t.integer  "rapp_id"
+    t.integer  "ooglers_id"
+    t.integer  "ooglers_type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "r_app_ooglers", ["rapp_id"], :name => "index_r_app_ooglers_on_rapp_id"
+
+  create_table "r_apps", :force => true do |t|
+    t.date     "submission_date"
+    t.integer  "property"
+    t.integer  "landlord"
+    t.integer  "realtor"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "users", :force => true do |t|

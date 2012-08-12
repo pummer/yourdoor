@@ -1,4 +1,6 @@
 RailsApp::Application.routes.draw do
+  resources :r_apps
+
   resources :properties
 
   authenticated :user do
