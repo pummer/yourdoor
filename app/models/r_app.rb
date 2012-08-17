@@ -1,7 +1,7 @@
 class RApp < ActiveRecord::Base
-  attr_accessible  :submission_date
+  attr_accessible  :submission_date, :landlord_id, :listing_broker_id, :property_id
   has_many :i_apps
-  has_one :property
-  has_one :realtor, :through => :r_app_ooglers, :conditions => ["ooglers_type.name = Realtor"]
-  has_one :landlord, :through => :r_app_ooglers, :conditions => ["ooglers_type.name = Landlord"]
+  belongs_to :property
+  belongs_to :landlord, :class_name => 'Oogler'
+  belongs_to :listing_broker, :class_name => 'Oogler'
 end

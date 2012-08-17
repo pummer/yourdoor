@@ -4,7 +4,7 @@ class CreateRApps < ActiveRecord::Migration
       t.date :submission_date
       t.integer :property
       t.integer :landlord
-      t.integer :realtor
+      t.integer :listing_broker
 
       t.timestamps
     end

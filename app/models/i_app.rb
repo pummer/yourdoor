@@ -1,5 +1,5 @@
 class IApp < ActiveRecord::Base
-  attr_accessible :date_of_birth, :drivers_license_number, :drivers_license_state, :email, :first_name, :last_name, :middle_name, :phone, :social_security_number
+  attr_accessible :date_of_birth, :drivers_license_number, :drivers_license_state, :email, :first_name, :last_name, :middle_name, :phone, :social_security_number, :user_id, :marital_status_id, :r_app_id
 
   belongs_to :user
   has_many :employments
@@ -9,5 +9,6 @@ class IApp < ActiveRecord::Base
   has_many :pets
   has_many :previous_addresses
   has_many :vehicles
-  has_one :marital_status
+  belongs_to :marital_status
+  belongs_to :r_app
 end

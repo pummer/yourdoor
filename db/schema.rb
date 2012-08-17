@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120812150412) do
+ActiveRecord::Schema.define(:version => 20120816061222) do
 
   create_table "emergency_contacts", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.string   "relationship"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "i_app_id"
   end
 
   create_table "employments", :force => true do |t|
@@ -38,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.string   "zip"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+    t.integer  "i_app_id"
   end
 
   create_table "i_apps", :force => true do |t|
@@ -52,6 +54,9 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.string   "email"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
+    t.integer  "user_id"
+    t.integer  "marital_status_id"
+    t.integer  "r_app_id"
   end
 
   create_table "incomes", :force => true do |t|
@@ -60,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.boolean  "proof_of_income"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "i_app_id"
   end
 
   create_table "marital_statuses", :force => true do |t|
@@ -76,12 +82,6 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.datetime "updated_at",   :null => false
   end
 
-  create_table "ooglers_types", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "personal_references", :force => true do |t|
     t.string   "name"
     t.string   "address"
@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.string   "relationship"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "i_app_id"
   end
 
   create_table "pets", :force => true do |t|
@@ -101,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.integer  "age"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "i_app_id"
   end
 
   create_table "previous_addresses", :force => true do |t|
@@ -117,6 +119,7 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.boolean  "rent_paid"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.integer  "i_app_id"
   end
 
   create_table "properties", :force => true do |t|
@@ -129,23 +132,16 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "r_app_ooglers", :force => true do |t|
-    t.integer  "rapp_id"
-    t.integer  "ooglers_id"
-    t.integer  "ooglers_type"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  add_index "r_app_ooglers", ["rapp_id"], :name => "index_r_app_ooglers_on_rapp_id"
-
   create_table "r_apps", :force => true do |t|
     t.date     "submission_date"
     t.integer  "property"
     t.integer  "landlord"
-    t.integer  "realtor"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.integer  "listing_broker"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.integer  "landlord_id"
+    t.integer  "listing_broker_id"
+    t.integer  "property_id"
   end
 
   create_table "users", :force => true do |t|
@@ -177,6 +173,7 @@ ActiveRecord::Schema.define(:version => 20120812150412) do
     t.string   "license_plate_state"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.integer  "i_app_id"
   end
 
 end
