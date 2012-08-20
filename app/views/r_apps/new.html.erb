@@ -1,5 +1,31 @@
-<h1>New r_app</h1>
+<h1>Creating a New Application</h1>
 
-<%= render 'form' %>
+<%= form_for(@r_app) do |f| %>
+  <% if @r_app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@r_app.errors.count, "error") %> prohibited this r_app from being saved:</h2>
 
+      <ul>
+      <% @r_app.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+<h3>Property</h3>
+	<% f.fields_for :property,  @r_app.property do |u| %>
+		<%= render :partial => 'properties/create',  :locals => {:f => u }  %>
+	<% end %>
+
+<h3>Landlord</h3>
+
+<h3>Broker</h3>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
 <%= link_to 'Back', r_apps_path %>
