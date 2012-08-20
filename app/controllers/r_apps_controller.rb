@@ -25,7 +25,9 @@ class RAppsController < ApplicationController
   # GET /r_apps/new.json
   def new
     @r_app = RApp.new
-
+    @r_app.build_property
+    logger.info "something"
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @r_app }
