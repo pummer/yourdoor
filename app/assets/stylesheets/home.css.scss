@@ -26,12 +26,18 @@ body { padding-top: 0px; }
 
 
 .instructions {
+	border-top: 3px;
+	border-color: black;
 	position: relative;
-	z-index: 500;
+	z-index: 501;
 	margin-top: 600px;
 	background: white;
 	padding-top: 20px;
+	width: 100%;
+	box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
 }
+
+
 
 .instructions h2 {
 	text-align: center;
@@ -39,7 +45,12 @@ body { padding-top: 0px; }
 }
 
 
-
 .instructions .container .row .span9 .instruction {
 	padding-top: 40px;
 }
+
+@media (max-width: 767px) {
+.instructions {
+
+	padding-right: 20px;
+}}

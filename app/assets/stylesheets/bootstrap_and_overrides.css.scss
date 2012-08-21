@@ -11,10 +11,24 @@ $baseFontFamily:        "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-se
 body { padding-top: 120px; }
 .hero-unit { background: none; }
 
-@import "bootstrap-responsive";
+@import "bootstrap-responsive-nolarge";
 
 .nav-tabs li a .brand {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 40px;
 	line-height: 40px;
+}
+
+.navbar-fixed-top {
+	z-index: 500;
+}
+
+footer {
+	padding-bottom: 15px;
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 940px;
 }
