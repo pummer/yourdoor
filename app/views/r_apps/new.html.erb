@@ -14,8 +14,8 @@
   <% end %>
   
 <h3>Property</h3>
-	<% f.fields_for :property,  @r_app.property do |u| %>
-		<%= render :partial => 'properties/create',  :locals => {:f => u }  %>
+	<%= f.fields_for :property, @r_app.property do |u| %>
+		<%= render :partial => 'properties/create',  :locals => {:u => u }  %>
 	<% end %>
 
 <h3>Landlord</h3>
