@@ -1,5 +1,8 @@
 #require File.expand_path('../../../lib/yourdoor/transunion', __FILE__)
-Dir["../../../lib/yourdoor/transunion/*.rb"].each {|file| puts file }
+#Dir["../../../"].each {|file| puts file }
+require File.dirname(__FILE__) + '/../../lib/yourdoor/transunion'
+
+
 
 
 module YourDoor

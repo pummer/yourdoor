@@ -11,10 +11,16 @@ module YourDoor
     
     def read_transactionControl_subscriber_memberCode()
       
-      xml_file = Nokogiri::XML(File.open("tu_request.xml"))
+      xml_path = File.expand_path(File.join(File.dirname(__FILE__), "tu_request.xml"))
       
-      puts xml_file.at_css("transactionControl subscriber memberCode").content
+      xml_file = Nokogiri::XML(File.open(xml_path))
       
+      
+      result = xml_file.at_css("transactionControl subscriber memberCode").content
+      
+      puts result
+      
+      result      
 
     end
 
