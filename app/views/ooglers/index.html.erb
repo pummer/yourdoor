@@ -1,0 +1,27 @@
+<h1>Listing ooglers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile phone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ooglers.each do |oogler| %>
+  <tr>
+    <td><%= oogler.name %></td>
+    <td><%= oogler.email %></td>
+    <td><%= oogler.mobile_phone %></td>
+    <td><%= link_to 'Show', oogler %></td>
+    <td><%= link_to 'Edit', edit_oogler_path(oogler) %></td>
+    <td><%= link_to 'Destroy', oogler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Oogler', new_oogler_path %>

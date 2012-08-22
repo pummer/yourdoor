@@ -1,0 +1,29 @@
+<%= form_for(@oogler) do |f| %>
+  <% if @oogler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@oogler.errors.count, "error") %> prohibited this oogler from being saved:</h2>
+
+      <ul>
+      <% @oogler.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_phone %><br />
+    <%= f.text_field :mobile_phone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

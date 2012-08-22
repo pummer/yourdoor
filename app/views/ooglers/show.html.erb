@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @oogler.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @oogler.email %>
+</p>
+
+<p>
+  <b>Mobile phone:</b>
+  <%= @oogler.mobile_phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_oogler_path(@oogler) %> |
+<%= link_to 'Back', ooglers_path %>

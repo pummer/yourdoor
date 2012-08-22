@@ -26,7 +26,8 @@ class RAppsController < ApplicationController
   def new
     @r_app = RApp.new
     @r_app.build_property
-    logger.info "something"
+    @r_app.build_landlord
+    @r_app.build_listing_broker
     
     respond_to do |format|
       format.html # new.html.erb

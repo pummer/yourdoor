@@ -1,8 +1,8 @@
 class RApp < ActiveRecord::Base
   attr_accessible  :submission_date, :landlord_id, :listing_broker_id, :property_id, :property_attributes
   belongs_to :property
-  belongs_to :landlord, :class_name => "Oogler"
-  belongs_to :listing_broker, :class_name => "Oogler"
+  belongs_to :landlord, :class_name => "Ooglers"
+  belongs_to :listing_broker, :class_name => "Ooglers"
   
   validates_presence_of :property
  # validates_presence_of :landlord

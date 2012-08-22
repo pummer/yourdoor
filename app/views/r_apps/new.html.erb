@@ -19,9 +19,14 @@
 	<% end %>
 
 <h3>Landlord</h3>
+	<%= f.fields_for :landlord,  @r_app.landlord do |u| %>
+		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
+	<% end %>
 
 <h3>Broker</h3>
-
+	<%= f.fields_for :landlord,  @r_app.landlord do |u| %>
+		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
+	<% end %>
 
   <div class="actions">
     <%= f.submit %>
