@@ -1,0 +1,2 @@
+module IAppsHelper
+end

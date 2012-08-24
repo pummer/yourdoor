@@ -1,0 +1,48 @@
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %><br />
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :social_security_number %><br />
+    <%= f.text_field :social_security_number %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :drivers_license_number %><br />
+    <%= f.text_field :drivers_license_number %>
+  </div>
+  <div class="field">
+    <%= f.label :drivers_license_state %><br />
+    <%= f.text_field :drivers_license_state %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+  	<%= f.label :marital_status %><br />
+    <%= radio_button_tag(:marital_status, "single") %>
+	<%= label_tag(:marital_status_single, "Single") %>
+	<%= radio_button_tag(:marital_status, "married") %>
+	<%= label_tag(:marital_status_married, "Married") %>
+  </div>
+  
+	<h3>Pets</h3>
+		<%= f.fields_for :pets do |u| %>
+		<%= render :partial => 'pets/create',  :locals => {:f => u }  %>
+	<% end %>

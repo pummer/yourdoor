@@ -1,0 +1,43 @@
+<h1>Listing i_apps</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Middle name</th>
+    <th>Last name</th>
+    <th>Social security number</th>
+    <th>Date of birth</th>
+    <th>Drivers license number</th>
+    <th>Drivers license state</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Marital status</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @i_apps.each do |i_app| %>
+  <tr>
+    <td><%= i_app.first_name %></td>
+    <td><%= i_app.middle_name %></td>
+    <td><%= i_app.last_name %></td>
+    <td><%= i_app.social_security_number %></td>
+    <td><%= i_app.date_of_birth %></td>
+    <td><%= i_app.drivers_license_number %></td>
+    <td><%= i_app.drivers_license_state %></td>
+    <td><%= i_app.phone %></td>
+    <td><%= i_app.email %></td>
+    <td><%= i_app.marital_status %></td>
+    <td><%= i_app.user %></td>
+    <td><%= link_to 'Show', i_app %></td>
+    <td><%= link_to 'Edit', edit_i_app_path(i_app) %></td>
+    <td><%= link_to 'Destroy', i_app, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New I app', new_i_app_path %>

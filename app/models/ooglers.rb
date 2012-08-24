@@ -3,10 +3,10 @@ class Ooglers < ActiveRecord::Base
   
   validates_presence_of :name
   # validates :email, :presence => true, :email => true
-  validates_format_of :phone, 
-                    :with => /\A[0-9]{10}\Z/, 
-                    :allow_blank => true, 
-                    :allow_nil => true
+  #validates_format_of :mobile_phone, 
+   #                 :with => /\A[0-9]{10}\Z/, 
+    #                :allow_blank => true, 
+     #               :allow_nil => true
  
   
 end

@@ -1,0 +1,61 @@
+<%= form_for(@i_app) do |f| %>
+  <% if @i_app.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@i_app.errors.count, "error") %> prohibited this i_app from being saved:</h2>
+
+      <ul>
+      <% @i_app.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %><br />
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :social_security_number %><br />
+    <%= f.text_field :social_security_number %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :drivers_license_number %><br />
+    <%= f.text_field :drivers_license_number %>
+  </div>
+  <div class="field">
+    <%= f.label :drivers_license_state %><br />
+    <%= f.text_field :drivers_license_state %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :marital_status %><br />
+    <%= f.text_field :marital_status %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -24,9 +24,16 @@
 	<% end %>
 
 <h3>Broker</h3>
-	<%= f.fields_for :landlord,  @r_app.landlord do |u| %>
+	<%= f.fields_for :listing_broker,  @r_app.listing_broker do |u| %>
 		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
 	<% end %>
+
+
+<h3>Personal Information</h3>
+	<%= f.fields_for :i_apps,  @r_app.i_apps do |iapps| %>
+		<%= render :partial => 'i_apps/create',  :locals => {:f => iapps }  %>
+	<% end %>
+
 
   <div class="actions">
     <%= f.submit %>

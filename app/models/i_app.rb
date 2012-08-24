@@ -6,11 +6,13 @@ class IApp < ActiveRecord::Base
   has_many :emergency_contacts, :dependent => :destroy
   has_many :incomes, :dependent => :destroy
   has_many :personal_references, :dependent => :destroy
-  has_many :pets, :dependent => :destroy
+  has_many :pets,:class_name => "Pets", :dependent => :destroy
   has_many :previous_addresses, :dependent => :destroy
   has_many :vehicles, :dependent => :destroy
   has_one :marital_status
   belongs_to :r_app
+  
+  attr_accessible :pets_attributes
   
   accepts_nested_attributes_for :employments
   accepts_nested_attributes_for :emergency_contacts

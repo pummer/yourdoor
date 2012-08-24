@@ -28,6 +28,8 @@ class RAppsController < ApplicationController
     @r_app.build_property
     @r_app.build_landlord
     @r_app.build_listing_broker
+    iapp = @r_app.i_apps.build
+    iapp.pets.build
     
     respond_to do |format|
       format.html # new.html.erb
