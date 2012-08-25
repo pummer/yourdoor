@@ -1,3 +1,13 @@
 // Place all the styles related to the r_apps controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.appsproperty .field, .appslandlord .field, .appsbroker .field, .appspersonal .field{
+	float:left;
+}
+
+.appsproperty, .appslandlord, .appspersonal, .appsbroker{
+	clear:both;
+}
+
+
