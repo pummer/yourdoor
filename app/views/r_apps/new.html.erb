@@ -12,28 +12,34 @@
       </ul>
     </div>
   <% end %>
-  
-<h3>Property</h3>
+
+<fieldset class="appsproperty">
+<legend>Property</legend>
 	<%= f.fields_for :property, @r_app.property do |u| %>
 		<%= render :partial => 'properties/create',  :locals => {:u => u }  %>
 	<% end %>
+</fieldset>
 
+<div class="appslandlord">
 <h3>Landlord</h3>
 	<%= f.fields_for :landlord,  @r_app.landlord do |u| %>
 		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
 	<% end %>
+</div>
 
+<div class="appsbroker">
 <h3>Broker</h3>
 	<%= f.fields_for :listing_broker,  @r_app.listing_broker do |u| %>
 		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
 	<% end %>
+</div>
 
-
+<div class="appspersonal">
 <h3>Personal Information</h3>
 	<%= f.fields_for :i_apps,  @r_app.i_apps do |iapps| %>
 		<%= render :partial => 'i_apps/create',  :locals => {:f => iapps }  %>
 	<% end %>
-
+</div>
 
   <div class="actions">
     <%= f.submit %>
