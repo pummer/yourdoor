@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address 1:</b>
+  <%= @previous_address.address_1 %>
+</p>
+
+<p>
+  <b>Address 2:</b>
+  <%= @previous_address.address_2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @previous_address.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @previous_address.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @previous_address.zip %>
+</p>
+
+<p>
+  <b>Length lived months:</b>
+  <%= @previous_address.length_lived_months %>
+</p>
+
+<p>
+  <b>Landlord name:</b>
+  <%= @previous_address.landlord_name %>
+</p>
+
+<p>
+  <b>Landlord phone:</b>
+  <%= @previous_address.landlord_phone %>
+</p>
+
+<p>
+  <b>Reason for leaving:</b>
+  <%= @previous_address.reason_for_leaving %>
+</p>
+
+<p>
+  <b>Rent amount:</b>
+  <%= @previous_address.rent_amount %>
+</p>
+
+<p>
+  <b>Rent paid:</b>
+  <%= @previous_address.rent_paid %>
+</p>
+
+
+<%= link_to 'Edit', edit_previous_address_path(@previous_address) %> |
+<%= link_to 'Back', previous_addresses_path %>

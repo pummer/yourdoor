@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Year:</b>
+  <%= @vechicle.year %>
+</p>
+
+<p>
+  <b>Make:</b>
+  <%= @vechicle.make %>
+</p>
+
+<p>
+  <b>Model:</b>
+  <%= @vechicle.model %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @vechicle.color %>
+</p>
+
+<p>
+  <b>License plate number:</b>
+  <%= @vechicle.license_plate_number %>
+</p>
+
+<p>
+  <b>License plate state:</b>
+  <%= @vechicle.license_plate_state %>
+</p>
+
+
+<%= link_to 'Edit', edit_vechicle_path(@vechicle) %> |
+<%= link_to 'Back', vechicles_path %>

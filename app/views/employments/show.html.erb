@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Employer:</b>
+  <%= @employment.employer %>
+</p>
+
+<p>
+  <b>Occupation:</b>
+  <%= @employment.occupation %>
+</p>
+
+<p>
+  <b>Hours per week:</b>
+  <%= @employment.hours_per_week %>
+</p>
+
+<p>
+  <b>Supervisor name:</b>
+  <%= @employment.supervisor_name %>
+</p>
+
+<p>
+  <b>Supervisor phone:</b>
+  <%= @employment.supervisor_phone %>
+</p>
+
+<p>
+  <b>Years employed:</b>
+  <%= @employment.years_employed %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @employment.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @employment.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @employment.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @employment.zip %>
+</p>
+
+
+<%= link_to 'Edit', edit_employment_path(@employment) %> |
+<%= link_to 'Back', employments_path %>

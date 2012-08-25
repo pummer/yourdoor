@@ -1,0 +1,41 @@
+<h1>Listing employments</h1>
+
+<table>
+  <tr>
+    <th>Employer</th>
+    <th>Occupation</th>
+    <th>Hours per week</th>
+    <th>Supervisor name</th>
+    <th>Supervisor phone</th>
+    <th>Years employed</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employments.each do |employment| %>
+  <tr>
+    <td><%= employment.employer %></td>
+    <td><%= employment.occupation %></td>
+    <td><%= employment.hours_per_week %></td>
+    <td><%= employment.supervisor_name %></td>
+    <td><%= employment.supervisor_phone %></td>
+    <td><%= employment.years_employed %></td>
+    <td><%= employment.address %></td>
+    <td><%= employment.city %></td>
+    <td><%= employment.state %></td>
+    <td><%= employment.zip %></td>
+    <td><%= link_to 'Show', employment %></td>
+    <td><%= link_to 'Edit', edit_employment_path(employment) %></td>
+    <td><%= link_to 'Destroy', employment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Employment', new_employment_path %>

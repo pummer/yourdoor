@@ -1,0 +1,35 @@
+<h1>Listing emergency_contacts</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Relationship</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @emergency_contacts.each do |emergency_contact| %>
+  <tr>
+    <td><%= emergency_contact.name %></td>
+    <td><%= emergency_contact.address %></td>
+    <td><%= emergency_contact.city %></td>
+    <td><%= emergency_contact.state %></td>
+    <td><%= emergency_contact.zip %></td>
+    <td><%= emergency_contact.phone %></td>
+    <td><%= emergency_contact.relationship %></td>
+    <td><%= link_to 'Show', emergency_contact %></td>
+    <td><%= link_to 'Edit', edit_emergency_contact_path(emergency_contact) %></td>
+    <td><%= link_to 'Destroy', emergency_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Emergency contact', new_emergency_contact_path %>

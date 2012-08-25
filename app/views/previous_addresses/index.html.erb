@@ -1,0 +1,43 @@
+<h1>Listing previous_addresses</h1>
+
+<table>
+  <tr>
+    <th>Address 1</th>
+    <th>Address 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Length lived months</th>
+    <th>Landlord name</th>
+    <th>Landlord phone</th>
+    <th>Reason for leaving</th>
+    <th>Rent amount</th>
+    <th>Rent paid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @previous_addresses.each do |previous_address| %>
+  <tr>
+    <td><%= previous_address.address_1 %></td>
+    <td><%= previous_address.address_2 %></td>
+    <td><%= previous_address.city %></td>
+    <td><%= previous_address.state %></td>
+    <td><%= previous_address.zip %></td>
+    <td><%= previous_address.length_lived_months %></td>
+    <td><%= previous_address.landlord_name %></td>
+    <td><%= previous_address.landlord_phone %></td>
+    <td><%= previous_address.reason_for_leaving %></td>
+    <td><%= previous_address.rent_amount %></td>
+    <td><%= previous_address.rent_paid %></td>
+    <td><%= link_to 'Show', previous_address %></td>
+    <td><%= link_to 'Edit', edit_previous_address_path(previous_address) %></td>
+    <td><%= link_to 'Destroy', previous_address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Previous address', new_previous_address_path %>

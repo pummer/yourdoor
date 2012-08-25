@@ -1,0 +1,35 @@
+<h1>Listing personal_references</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Relationship</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @personal_references.each do |personal_reference| %>
+  <tr>
+    <td><%= personal_reference.name %></td>
+    <td><%= personal_reference.address %></td>
+    <td><%= personal_reference.city %></td>
+    <td><%= personal_reference.state %></td>
+    <td><%= personal_reference.zip %></td>
+    <td><%= personal_reference.phone %></td>
+    <td><%= personal_reference.relationship %></td>
+    <td><%= link_to 'Show', personal_reference %></td>
+    <td><%= link_to 'Edit', edit_personal_reference_path(personal_reference) %></td>
+    <td><%= link_to 'Destroy', personal_reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Personal reference', new_personal_reference_path %>

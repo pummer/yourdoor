@@ -1,0 +1,33 @@
+<h1>Listing vechicles</h1>
+
+<table>
+  <tr>
+    <th>Year</th>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Color</th>
+    <th>License plate number</th>
+    <th>License plate state</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @vechicles.each do |vechicle| %>
+  <tr>
+    <td><%= vechicle.year %></td>
+    <td><%= vechicle.make %></td>
+    <td><%= vechicle.model %></td>
+    <td><%= vechicle.color %></td>
+    <td><%= vechicle.license_plate_number %></td>
+    <td><%= vechicle.license_plate_state %></td>
+    <td><%= link_to 'Show', vechicle %></td>
+    <td><%= link_to 'Edit', edit_vechicle_path(vechicle) %></td>
+    <td><%= link_to 'Destroy', vechicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Vechicle', new_vechicle_path %>

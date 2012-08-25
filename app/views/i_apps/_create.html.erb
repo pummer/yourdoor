@@ -34,13 +34,7 @@
     <%= f.label :email %><br />
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-  	<%= f.label :marital_status %><br />
-    <%= radio_button_tag(:marital_status, "single") %>
-	<%= label_tag(:marital_status_single, "Single") %>
-	<%= radio_button_tag(:marital_status, "married") %>
-	<%= label_tag(:marital_status_married, "Married") %>
-  </div>
+ 	
   
 	<h3>Pets</h3>
 		<%= f.fields_for :pets do |u| %>

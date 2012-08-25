@@ -57,3 +57,6 @@ gem "devise", ">= 2.1.0"
 # Bootstrap
 gem 'sass-rails', '~> 3.1'
 gem 'bootstrap-sass', '~> 2.0.4.0'
+
+# Stripe
+gem 'stripe'

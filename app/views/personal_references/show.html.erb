@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @personal_reference.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @personal_reference.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @personal_reference.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @personal_reference.state %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @personal_reference.zip %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @personal_reference.phone %>
+</p>
+
+<p>
+  <b>Relationship:</b>
+  <%= @personal_reference.relationship %>
+</p>
+
+
+<%= link_to 'Edit', edit_personal_reference_path(@personal_reference) %> |
+<%= link_to 'Back', personal_references_path %>
