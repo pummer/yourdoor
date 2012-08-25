@@ -78,7 +78,7 @@
 			      <img src="http://placehold.it/260x180" alt="" class="thumbnail">
 			  </div>
 			</div>			
-			<div class="row">
+			<div class="row clearfix">
 				<div class="span3">
 			      <img src="http://placehold.it/260x180" alt="" class="thumbnail">
 			  </div>
@@ -88,7 +88,13 @@
 				If you're applying with other people, simply click the Add Roommate button, and we’ll send a link to your future co-inhabitant to fill out an application.  When finished, we’ll make sure the landlord gets all your information at the same time.
 				</div>
 			  </div>
+			  		
 			</div>
+			<% if !user_signed_in? %>
+
+				  		<%= render 'new' %>
+
+			  <% end %>	
 	        <footer>
 			<hr>
 					&copy; YourDoor 2012
