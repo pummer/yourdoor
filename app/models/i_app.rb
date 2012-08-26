@@ -14,6 +14,7 @@ class IApp < ActiveRecord::Base
   belongs_to :payment
   
   attr_accessible :pets_attributes
+  attr_accessible :payment_attributes
   
   accepts_nested_attributes_for :employments
   accepts_nested_attributes_for :emergency_contacts
