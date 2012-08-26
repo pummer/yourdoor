@@ -1,3 +1,6 @@
+  <fieldset class="appspersonal">
+<legend>Personal Information</legend>
+
   <div class="field">
     <%= f.label :first_name %>
     <%= f.text_field :first_name %>
@@ -34,5 +37,20 @@
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
+</fieldset>
+  
+  <fieldset class="appspets">
+  <legend>Pets</legend>
+    <%= f.fields_for :pets do |u| %>
+    <%= render :partial => 'pets/create',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+<fieldset class="appspayment">
+  <legend>Payment</legend>
+    <%= f.fields_for :payment do |u| %>
+    <%= render :partial => 'payments/create',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
  	
   

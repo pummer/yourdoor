@@ -11,6 +11,7 @@ class IApp < ActiveRecord::Base
   has_many :vehicles, :dependent => :destroy
   has_one :marital_status
   belongs_to :r_app
+  belongs_to :payment
   
   attr_accessible :pets_attributes
   
@@ -21,5 +22,6 @@ class IApp < ActiveRecord::Base
   accepts_nested_attributes_for :pets
   accepts_nested_attributes_for :previous_addresses
   accepts_nested_attributes_for :vehicles
+  accepts_nested_attributes_for :payment
   
 end

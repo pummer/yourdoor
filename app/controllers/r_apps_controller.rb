@@ -30,7 +30,8 @@ class RAppsController < ApplicationController
     @r_app.build_listing_broker
     iapp = @r_app.i_apps.build
     iapp.pets.build
-    
+    iapp.build_payment
+      
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @r_app }
