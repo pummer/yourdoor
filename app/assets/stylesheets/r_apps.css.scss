@@ -2,12 +2,61 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.appsproperty .field, .appslandlord .field, .appsbroker .field, .appspersonal .field{
+.appsproperty .field, .appslandlord .field, .appsbroker .field, .appspersonal .field, .appspets .field {
 	float:left;
+  margin: 6px;
 }
 
 .appsproperty, .appslandlord, .appspersonal, .appsbroker{
 	clear:both;
 }
 
+legend {
+  display:inline;
+  width:auto;
+  background:transparent;
+  margin-bottom:12px;
+  margin-left:4px;
+  border-bottom:none;
+  padding: 0 2px;
+  font-weight:bold;
+}
 
+fieldset {
+  border: 1px solid black ;
+}
+
+.dob {
+  clear:both;
+  float:left;
+}
+
+.dln {
+  clear:both;
+  float:left;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+ 
+.clearfix {
+  display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+  display: block;
+}
+ 
+* html .clearfix {
+  height: 1%;
+}
+
+.actions {
+  margin-top:15px;
+}
