@@ -1,14 +1,17 @@
 class IApp < ActiveRecord::Base
-  attr_accessible :date_of_birth, :drivers_license_number, :drivers_license_state, :email, :first_name, :last_name, :middle_name, :phone, :social_security_number, :user_id, :marital_status_id, :r_app_id
+  attr_accessible :date_of_birth, :drivers_license_number, :drivers_license_state, :email, :first_name, :last_name, 
+    :middle_name, :phone, :social_security_number, :user_id, :marital_status_id, :r_app_id, :employments_attributes,
+    :emergency_contacts_attributes, :personal_references_attributes, :pets_attributes, :previous_addresses_attributes,
+    :vehicles_attributes
 
   belongs_to :user
-  has_many :employments, :dependent => :destroy
-  has_many :emergency_contacts, :dependent => :destroy
-  has_many :incomes, :dependent => :destroy
-  has_many :personal_references, :dependent => :destroy
-  has_many :pets,:class_name => "Pets", :dependent => :destroy
-  has_many :previous_addresses, :dependent => :destroy
-  has_many :vehicles, :dependent => :destroy
+  has_many :employments, :class_name => 'Employments', :dependent => :destroy
+  has_many :emergency_contacts, :class_name => 'EmergencyContacts', :dependent => :destroy
+  has_many :incomes, :class_name => 'Incomes', :dependent => :destroy
+  has_many :personal_references, :class_name => 'PersonalReferences', :dependent => :destroy
+  has_many :pets, :class_name => 'Pets', :dependent => :destroy
+  has_many :previous_addresses, :class_name => 'PreviousAddresses', :dependent => :destroy
+  has_many :vehicles, :class_name => 'Vehicles', :dependent => :destroy
   has_one :marital_status
   belongs_to :r_app
   belongs_to :payment

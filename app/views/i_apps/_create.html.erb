@@ -41,10 +41,48 @@
   
   <fieldset class="appspets">
   <legend>Pets</legend>
-    <%= f.fields_for :pets do |u| %>
+    <%= f.fields_for :pets_attributes do |u| %>
     <%= render :partial => 'pets/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
+
+<fieldset class="appsemployments">
+  <legend>Employment History</legend>
+  <%= f.fields_for :employments_attributes do |u| %>
+    <%= render :partial => 'employments/create',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+<fieldset class="appsemergencycontacts">
+  <legend>Emergency Contacts</legend>
+  <%= f.fields_for :emergency_contacts_attributes do |u| %>
+    <%= render :partial => 'emergency_contacts/create',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+
+<fieldset class="appsincomes">
+  <legend>Current Income</legend>
+    <%= f.fields_for :incomes_attributes do |u| %>
+    <%= render :partial => 'incomes/create',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+
+<fieldset class="appspersonalreferences">
+  <legend>Personal References</legend>
+    <%= f.fields_for :personal_references_attributes do |u| %>
+    <%= render :partial => 'personal_references/create',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+<fieldset class="appspreviousaddresses">
+  <legend>Previous Addresses</legend>
+    <%= f.fields_for :previous_addresses_attributes do |u| %>
+    <%= render :partial => 'previous_addresses/create',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
 
 <fieldset class="appspayment">
   <legend>Payment</legend>
@@ -52,5 +90,3 @@
     <%= render :partial => 'payments/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
- 	
-  
