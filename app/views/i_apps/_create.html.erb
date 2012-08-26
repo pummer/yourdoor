@@ -1,5 +1,5 @@
   <fieldset class="appspersonal">
-<legend>Personal Information</legend>
+<h4>Personal Information</h4>
 
   <div class="field">
     <%= f.label :first_name %>
@@ -40,21 +40,21 @@
 </fieldset>
   
   <fieldset class="appspets">
-  <legend>Pets</legend>
+  <h4>Pets</h4>
     <%= f.fields_for :pets_attributes do |u| %>
     <%= render :partial => 'pets/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
 <fieldset class="appsemployments">
-  <legend>Employment History</legend>
+  <h4>Employment History</h4>
   <%= f.fields_for :employments_attributes do |u| %>
     <%= render :partial => 'employments/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
 <fieldset class="appsemergencycontacts">
-  <legend>Emergency Contacts</legend>
+  <h4>Emergency Contacts</h4>
   <%= f.fields_for :emergency_contacts_attributes do |u| %>
     <%= render :partial => 'emergency_contacts/create',  :locals => {:f => u }  %>
   <% end %>
@@ -62,7 +62,7 @@
 
 
 <fieldset class="appsincomes">
-  <legend>Current Income</legend>
+  <h4>Current Income</h4>
     <%= f.fields_for :incomes_attributes do |u| %>
     <%= render :partial => 'incomes/create',  :locals => {:f => u }  %>
   <% end %>
@@ -70,14 +70,14 @@
 
 
 <fieldset class="appspersonalreferences">
-  <legend>Personal References</legend>
+  <h4>Personal References</h4>
     <%= f.fields_for :personal_references_attributes do |u| %>
     <%= render :partial => 'personal_references/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
 <fieldset class="appspreviousaddresses">
-  <legend>Previous Addresses</legend>
+  <h4>Previous Addresses</h4>
     <%= f.fields_for :previous_addresses_attributes do |u| %>
     <%= render :partial => 'previous_addresses/create',  :locals => {:f => u }  %>
   <% end %>
@@ -85,7 +85,7 @@
 
 
 <fieldset class="appspayment">
-  <legend>Payment</legend>
+  <h4>Payment</h4>
     <%= f.fields_for :payment do |u| %>
     <%= render :partial => 'payments/create',  :locals => {:f => u }  %>
   <% end %>

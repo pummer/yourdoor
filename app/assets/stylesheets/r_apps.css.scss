@@ -11,19 +11,21 @@
 	clear:both;
 }
 
-legend {
-  display:inline;
-  width:auto;
-  background:transparent;
-  margin-bottom:12px;
-  margin-left:4px;
-  border-bottom:none;
-  padding: 0 2px;
+h4 {
+  display: block;
+  width: auto;
+  background: #D4D2D2;
+  margin-bottom: 8px;
+  border-bottom: 1px solid black;
+  padding-left: 6px;
+  font-size: 18px;
+  line-height: 1.5em;
   font-weight:bold;
 }
 
 fieldset {
-  border: 1px solid black ;
+  margin-top: 6px;
+  border: 1px solid black;
 }
 
 .dob {
@@ -59,4 +61,8 @@ html[xmlns] .clearfix {
 
 .actions {
   margin-top:15px;
+}
+
+#appstitle {
+  text-align: center;
 }
