@@ -34,6 +34,7 @@
 	<% end %>
 </fieldset>
 
+<fieldset class="appsindividual">
 	<%= f.fields_for :i_apps,  @r_app.i_apps do |iapps| %>
 		<%= render :partial => 'i_apps/create',  :locals => {:f => iapps }  %>
 	<% end %>
