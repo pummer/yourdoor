@@ -1,4 +1,6 @@
 RailsApp::Application.routes.draw do
+  resources :payments
+
   resources :r_apps
 
   resources :properties

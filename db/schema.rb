@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120816061222) do
+ActiveRecord::Schema.define(:version => 20120825181557) do
 
   create_table "emergency_contacts", :force => true do |t|
     t.string   "name"
@@ -80,6 +80,18 @@ ActiveRecord::Schema.define(:version => 20120816061222) do
     t.string   "mobile_phone"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "ooglers_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "payments", :force => true do |t|
+    t.string   "stripe_charge_token"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "personal_references", :force => true do |t|
