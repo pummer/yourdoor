@@ -3,17 +3,18 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
-  payment.setupForm()
+#  payment.setupForm()
 
 payment =
-  setupForm: ->
-    $('#new_payment').submit ->
-      #$('input[type=submit]').attr('disabled', true)
-      if $('#card_number').length
-        payment.processCard()
-        false
-      else
-        false
+ 
+ # setupForm: ->
+  #  $('#new_payment').submit ->
+   #   #$('input[type=submit]').attr('disabled', true)
+    #  if $('#card_number').length
+    #    payment.processCard()
+    #    false
+    #  else
+    #    false
   
   processCard: ->
     card =
@@ -26,8 +27,10 @@ payment =
   handleStripeResponse: (status, response) ->
 
     if status == 200
-      $('#payment_stripe_card_token').val(response.id)
-      $('#new_payment')[0].submit()
+      alert("Valid Stripe Response")
+     # $('#payment_stripe_card_token').val(response.id)
+     # $('#new_payment')[0].submit()
     else
-      $('#stripe_error').text(response.error.message)
-      $('input[type=submit]').attr('disabled', false)
+      alert("Invalid Stripe Resonse\n"+response.error.message)
+     # $('#stripe_error').text(response.error.message)
+     # $('input[type=submit]').attr('disabled', false)

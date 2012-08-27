@@ -2,7 +2,7 @@ class Payment < ActiveRecord::Base
   attr_accessor :stripe_card_token
   attr_accessible :stripe_card_token
   
-  def save_with_payment
+  def charge_customer(amount, description)
     
     if valid?
       amount = 25
@@ -10,12 +10,12 @@ class Payment < ActiveRecord::Base
        amount: (amount.to_f*100).to_i,
        currency: "usd",
        card: stripe_card_token,
-       description: "Rental Test payment"
+       description: description
        )
        
        self.stripe_charge_token = charge.id
        
-       save!
+       #save!
      end
     rescue Stripe::InvalidRequestError => e
      logger.error "Stripe error while creating customer: #{e.message}"

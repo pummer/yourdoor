@@ -61,3 +61,6 @@ gem 'bootstrap-sass', '~> 2.0.4.0'
 
 # Stripe
 gem 'stripe'
+
+# Client Side Validations
+gem 'client_side_validations'

@@ -1,6 +1,6 @@
 <h1>Apartment Rental Application</h1>
 
-<%= form_for(@r_app) do |f| %>
+<%= form_for @r_app, :validate => true do |f| %>
   <% if @r_app.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@r_app.errors.count, "error") %> prohibited this r_app from being saved:</h2>

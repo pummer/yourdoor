@@ -47,7 +47,19 @@ class RAppsController < ApplicationController
   # POST /r_apps.json
   def create
     @r_app = RApp.new(params[:r_app])
-
+     
+    # Begin Transaction which will Make Credit Bureau Request
+    # and Stripe Payment. If failure occurs, roll back the Transaction and 
+    # Issue Refund if Stripe Transaction went through
+    
+    # determine amount of money to charge customer (25 initially. 5 if later on)
+    # May want to put this inside the R_App Model to make a truely skinny controller
+    amount = 25.00
+    description = "Transaction for #{@r_app.property.address_1} #{@r_app.property.address_2}, #{@r_app.property.zip}."
+    @r_app.i_apps.each do |i_app|
+      i_app.payment.charge_customer(amount, description) 
+    end 
+    
     respond_to do |format|
       if @r_app.save
         format.html { redirect_to @r_app, notice: 'R app was successfully created.' }

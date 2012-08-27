@@ -7,3 +7,4 @@ jQuery ->
       $('#applyNow').fadeOut '200', ->
         $("#checkEmail").fadeIn '200'
         $(".inputable").trigger 'focus'
+        
