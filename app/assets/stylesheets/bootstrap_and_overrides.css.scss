@@ -19,9 +19,22 @@ body { padding-top: 120px; }
 	line-height: 40px;
 }
 
-.navbar-fixed-top {
-	z-index: 500;
+.btn-success{
+    vertical-align: top;
 }
+
+.btn-default{
+    float:right;
+}
+
+.navbar{
+    vertical-align:middle;
+}
+
+.navbar-fixed-top {
+	box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
 
 footer {
 	padding-bottom: 15px;
@@ -41,3 +54,10 @@ footer {
 
 .instructions #applyNowButton {
 }
+
+h2 {
+	margin-top:10px;
+	border-bottom:thin solid #F0F0F0;
+	margin-bottom:10px;
+}
+

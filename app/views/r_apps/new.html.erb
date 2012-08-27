@@ -1,4 +1,4 @@
-<h1>Apartment Rental Application</h1>
+<h1 id="appstitle">Apartment Rental Application</h1>
 
 <%= form_for @r_app, :validate => true do |f| %>
   <% if @r_app.errors.any? %>
@@ -14,26 +14,27 @@
   <% end %>
 
 <fieldset class="appsproperty">
-<legend>Property</legend>
+<h4>Property</h4>
 	<%= f.fields_for :property, @r_app.property do |u| %>
 		<%= render :partial => 'properties/create',  :locals => {:u => u }  %>
 	<% end %>
 </fieldset>
 
 <fieldset class="appslandlord">
-<legend>Landlord</legend>
+<h4>Landlord</h4>
 	<%= f.fields_for :landlord,  @r_app.landlord do |u| %>
 		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
 	<% end %>
 </fieldset>
 
 <fieldset class="appsbroker">
-<legend>Broker</legend>
+<h4>Broker</h4>
 	<%= f.fields_for :listing_broker,  @r_app.listing_broker do |u| %>
 		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
 	<% end %>
 </fieldset>
 
+<fieldset class="appsindividual">
 	<%= f.fields_for :i_apps,  @r_app.i_apps do |iapps| %>
 		<%= render :partial => 'i_apps/create',  :locals => {:f => iapps }  %>
 	<% end %>
