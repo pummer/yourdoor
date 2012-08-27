@@ -8,6 +8,8 @@ jQuery ->
        #Process Credit Card
        $('input[type=submit]').attr('disabled', true)
        payment.processCard()
+     else
+       alert("Form Not Valid")
      false
     
      

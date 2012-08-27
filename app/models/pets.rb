@@ -3,4 +3,5 @@ class Pets < ActiveRecord::Base
   belongs_to :i_app
   
   validates_presence_of :type_breed
+  validates_presence_of :age
 end

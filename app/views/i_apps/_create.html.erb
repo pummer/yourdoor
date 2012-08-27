@@ -41,21 +41,21 @@
   
   <fieldset class="appspets">
   <h4>Pets</h4>
-    <%= f.fields_for :pets_attributes do |u| %>
+    <%= f.fields_for :pets do |u| %>
     <%= render :partial => 'pets/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
 <fieldset class="appsemployments">
   <h4>Employment History</h4>
-  <%= f.fields_for :employments_attributes do |u| %>
+  <%= f.fields_for :employments do |u| %>
     <%= render :partial => 'employments/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
 <fieldset class="appsemergencycontacts">
   <h4>Emergency Contacts</h4>
-  <%= f.fields_for :emergency_contacts_attributes do |u| %>
+  <%= f.fields_for :emergency_contacts do |u| %>
     <%= render :partial => 'emergency_contacts/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
@@ -63,7 +63,7 @@
 
 <fieldset class="appsincomes">
   <h4>Current Income</h4>
-    <%= f.fields_for :incomes_attributes do |u| %>
+    <%= f.fields_for :incomes do |u| %>
     <%= render :partial => 'incomes/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
@@ -71,14 +71,14 @@
 
 <fieldset class="appspersonalreferences">
   <h4>Personal References</h4>
-    <%= f.fields_for :personal_references_attributes do |u| %>
+    <%= f.fields_for :personal_references do |u| %>
     <%= render :partial => 'personal_references/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
 <fieldset class="appspreviousaddresses">
   <h4>Previous Addresses</h4>
-    <%= f.fields_for :previous_addresses_attributes do |u| %>
+    <%= f.fields_for :previous_addresses do |u| %>
     <%= render :partial => 'previous_addresses/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>

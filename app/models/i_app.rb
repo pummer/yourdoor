@@ -1,8 +1,8 @@
 class IApp < ActiveRecord::Base
   attr_accessible :date_of_birth, :drivers_license_number, :drivers_license_state, :email, :first_name, :last_name, 
-    :middle_name, :phone, :social_security_number, :user_id, :marital_status_id, :r_app_id, :employments_attributes,
-    :emergency_contacts_attributes, :personal_references_attributes, :pets_attributes, :previous_addresses_attributes,
-    :vehicles_attributes
+    :middle_name, :phone, :social_security_number, :user_id, :marital_status_id, :r_app_id, :employments,
+    :emergency_contacts, :personal_references, :pets, :previous_addresses,
+    :vehicles
 
   belongs_to :user
   has_many :employments, :class_name => 'Employments', :dependent => :destroy
@@ -18,6 +18,11 @@ class IApp < ActiveRecord::Base
   
   attr_accessible :pets_attributes
   attr_accessible :payment_attributes
+  attr_accessible :employments_attributes
+  attr_accessible :emergency_contacts_attributes
+  attr_accessible :incomes_attributes
+  attr_accessible :personal_references_attributes
+  attr_accessible :previous_addresses_attributes
   
   
   accepts_nested_attributes_for :employments

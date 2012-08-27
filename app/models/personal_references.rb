@@ -5,7 +5,6 @@ class PersonalReferences < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :address
   validates_presence_of :city
-  validates_presence_of :iapp_id
   validates_presence_of :phone
   validates_presence_of :state
   validates_presence_of :zip

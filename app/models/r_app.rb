@@ -19,4 +19,18 @@ class RApp < ActiveRecord::Base
   accepts_nested_attributes_for :landlord
   accepts_nested_attributes_for :listing_broker
   
+  def create_application
+    if valid?
+    amount = 25.00
+    description = "Transaction for #{self.property.address_1} #{self.property.address_2}, #{self.property.zip}."
+    self.i_apps.each do |i_app|
+      i_app.payment.charge_customer(amount, description)
+      
+      save! 
+    end 
+  
+    end
+    
+  end
+  
 end

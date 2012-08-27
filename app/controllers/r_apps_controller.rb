@@ -33,10 +33,15 @@ class RAppsController < ApplicationController
 
 #Adam commenting this out 7:15PM 8/26 -- Andy let's talk about this please
     iapp = @r_app.i_apps.build
-#    iapp.pets.build
+    iapp.pets.build
+    iapp.employments.build
+    iapp.emergency_contacts.build
+    iapp.incomes.build
+    iapp.personal_references.build
+    iapp.previous_addresses.build
 #    iapp.build
-#    iapp.build_payment
-#    iapp.build_
+    iapp.build_payment
+ #   iapp.build_
       
     respond_to do |format|
       format.html # new.html.erb
@@ -60,14 +65,9 @@ class RAppsController < ApplicationController
     
     # determine amount of money to charge customer (25 initially. 5 if later on)
     # May want to put this inside the R_App Model to make a truely skinny controller
-    amount = 25.00
-    description = "Transaction for #{@r_app.property.address_1} #{@r_app.property.address_2}, #{@r_app.property.zip}."
-    @r_app.i_apps.each do |i_app|
-      i_app.payment.charge_customer(amount, description) 
-    end 
     
     respond_to do |format|
-      if @r_app.save
+      if @r_app.create_application
         format.html { redirect_to @r_app, notice: 'R app was successfully created.' }
         format.json { render json: @r_app, status: :created, location: @r_app }
       else
