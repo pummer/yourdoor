@@ -2,28 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.appsproperty .field, .appslandlord .field, .appsbroker .field, .appspersonal .field, .appspets .field {
+.appsproperty .field, .appslandlord .field, .appsbroker .field, .appspersonal .field, .appspets .field, .appspayment .field {
 	float:left;
   margin: 6px;
 }
 
-.appsproperty, .appslandlord, .appspersonal, .appsbroker{
+.appsproperty, .appslandlord, .appspersonal, .appsbroker, .appspayment {
 	clear:both;
 }
 
-legend {
-  display:inline;
-  width:auto;
-  background:transparent;
-  margin-bottom:12px;
-  margin-left:4px;
-  border-bottom:none;
-  padding: 0 2px;
+h4 {
+  display: block;
+  width: auto;
+  background: #D4D2D2;
+  margin-bottom: 8px;
+  border-bottom: 1px solid black;
+  padding-left: 6px;
+  font-size: 18px;
+  line-height: 1.5em;
   font-weight:bold;
 }
 
 fieldset {
-  border: 1px solid black ;
+  margin-top: 6px;
+  border: 1px solid black;
 }
 
 .dob {
@@ -59,4 +61,8 @@ html[xmlns] .clearfix {
 
 .actions {
   margin-top:15px;
+}
+
+#appstitle {
+  text-align: center;
 }
