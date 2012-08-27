@@ -6,7 +6,6 @@
 	<%= form_tag("/validate", id: "HomePageForm") do %>
 	<%= label_tag(:email, "Email Address") %>
 	<%= email_field_tag(:email,nil, class: "inputable")%>
-	<%= submit_tag("Submit", class: "btn-success") %>
 	<%= link_to "Let me in", "#", id: "SubmitEmail", class: "btn btn-success" %>
 	<% end %>
 </div>
