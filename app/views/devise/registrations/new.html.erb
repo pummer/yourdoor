@@ -1,24 +1,29 @@
-<h2>Sign up</h2>
+
+<h2>Create a new YourDoor Account</h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <p><%= f.label :first_name %><br />
-  <%= f.text_field :first_name %></p>
+<div class="control-label">
+  <%= f.label :first_name %>
+  <div class="controls">
+  	<%= f.text_field :first_name %>
+  </div>
+</div>
 
-  <p><%= f.label :last_name %><br />
+  <p><%= f.label :last_name %>
   <%= f.text_field :last_name %></p>
 
-  <div><%= f.label :email %><br />
+  <div><%= f.label :email %>
   <%= f.email_field :email %></div>
 
-  <div><%= f.label :password %><br />
+  <div><%= f.label :password %>
   <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div><%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div class="form-actions"><%= f.submit "Sign up", :class => "btn" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>

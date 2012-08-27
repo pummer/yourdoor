@@ -28,9 +28,13 @@ class RAppsController < ApplicationController
     @r_app.build_property
     @r_app.build_landlord
     @r_app.build_listing_broker
+
+#Adam commenting this out 7:15PM 8/26 -- Andy let's talk about this please
     iapp = @r_app.i_apps.build
-    iapp.pets.build
-    iapp.build_payment
+#    iapp.pets.build
+#    iapp.build
+#    iapp.build_payment
+#    iapp.build_
       
     respond_to do |format|
       format.html # new.html.erb
