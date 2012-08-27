@@ -1,6 +1,12 @@
-<%=
+<%= link_to image_tag("yd_logo_1.png", :width => "200px", :class => "brand"), root_url %>
+  
+  <% if user_signed_in? %>  
+    <strong><%= "#{current_user.email}" %></strong>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-large btn-default" %>
+    <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-large btn-default" %>
 
-link_to image_tag("yd_logo_1.png", :width => "200px", :class => "brand"), root_url 
+  <% else %>
+    <%= link_to "Login", new_user_session_path, class: "btn btn-large btn-default" %>
+  <% end %>
 
-%>
-
+</div>

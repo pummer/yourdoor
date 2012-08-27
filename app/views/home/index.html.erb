@@ -11,14 +11,11 @@
 				<p>
 				<h3>YourDoor is a simple, easy way for prospective tenants to submit rental applications (with credit checks) to brokers and landlords.</h3></p>
 				<br/><br/>
+				  <%= puts user_signed_in? %>
 				  <% if user_signed_in? %>
-
 				  		<%= render 'returning' %>
-
 				  <% else %>
-
 				  		<%= render 'new' %>
-
 				  <% end %>
 	          </div>
 	          <div class="span7">

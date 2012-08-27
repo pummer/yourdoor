@@ -10,8 +10,13 @@
   <%= f.text_field :last_name %></p>
 
   <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
+    <% if params[:email] %>
+      <%= f.email_field :email, :value => params[:email] %>
+    <% else %>
+      <%= f.email_field :email %>
+    <% end %>
+  </div>
+  
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
 
