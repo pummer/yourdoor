@@ -1,11 +1,11 @@
 <div id="applyNow">
-<a href="#" id="applyNowButton" class="btn btn-large btn-success">Sign up Now!</a>
+<a href="#" id="applyNowButton" class="btn btn-large btn-success"> Apply Online Now! </a>
 </div>
 
 <div id="checkEmail" style="display:none">
 	<%= form_tag("/validate", id: "HomePageForm") do %>
 	<%= label_tag(:email, "Email Address") %>
 	<%= email_field_tag(:email,nil, class: "inputable")%>
-	<%= link_to "Let me in", "#", id: "SubmitEmail", class: "btn btn-success" %>
+	<%= link_to "Go!", "#", id: "SubmitEmail", class: "btn btn-success" %>
 	<% end %>
 </div>

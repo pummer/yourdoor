@@ -41,7 +41,7 @@
   
   <fieldset class="appspets">
   <h4>Pets</h4>
-    <%= f.fields_for :pets do |u| %>
+    <%= f.fields_for :pets_attributes do |u| %>
     <%= render :partial => 'pets/create',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
