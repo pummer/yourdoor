@@ -13,6 +13,13 @@ body { padding-top: 120px; }
 
 @import "bootstrap-responsive-nolarge";
 
+.btn {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.content { padding-top: 130px; }
+
 .nav-tabs li a .brand {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 40px;
@@ -38,6 +45,9 @@ body { padding-top: 120px; }
 
 footer {
 	padding-bottom: 15px;
+	border-top:thin solid #F0F0F0;
+	margin-top:15px;
+	padding-top:2px;
 }
 
 .container-fluid {
