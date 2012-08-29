@@ -13,32 +13,32 @@
     </div>
   <% end %>
 
-<fieldset class="appsproperty">
+<fieldset class="appssection">
 <h4>Property</h4>
 	<%= f.fields_for :property, @r_app.property do |u| %>
 		<%= render :partial => 'properties/create',  :locals => {:u => u }  %>
 	<% end %>
 </fieldset>
 
-<fieldset class="appslandlord">
+<fieldset class="appssection">
 <h4>Landlord</h4>
 	<%= f.fields_for :landlord,  @r_app.landlord do |u| %>
 		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
 	<% end %>
 </fieldset>
 
-<fieldset class="appsbroker">
+<fieldset class="appssection">
 <h4>Broker</h4>
 	<%= f.fields_for :listing_broker,  @r_app.listing_broker do |u| %>
 		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
 	<% end %>
 </fieldset>
 
-<fieldset class="appsindividual">
+<div class="appsindividual">
 	<%= f.fields_for :i_apps,  @r_app.i_apps do |iapps| %>
 		<%= render :partial => 'i_apps/create',  :locals => {:f => iapps }  %>
 	<% end %>
-</fieldset>
+</div>
 
 
   <div class="actions">
