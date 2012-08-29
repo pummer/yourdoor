@@ -2,12 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.appsproperty .field, .appslandlord .field, .appsbroker .field, .appspersonal .field, .appspets .field, .appspayment .field {
+.appssection .field, .appsinside .field {
 	float:left;
   margin: 6px;
 }
 
-.appsproperty, .appslandlord, .appspersonal, .appsbroker, .appspayment {
+.appssection {
 	clear:both;
 }
 
