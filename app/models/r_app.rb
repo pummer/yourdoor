@@ -27,10 +27,12 @@ class RApp < ActiveRecord::Base
       i_app.payment.charge_customer(amount, description)
       
       save! 
-    end 
-  
+    end   
     end
-    
+    rescue Stripe::InvalidRequestError => e
+    logger.error "Stripe error while creating customer: #{e.message}"
+    errors.add :base, "There was a problem with your credit card."
+    false
   end
   
 end

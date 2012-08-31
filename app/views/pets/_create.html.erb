@@ -1,3 +1,4 @@
+ <div class="fields">
  <div class="field">
     <%= f.label :age %>
     <%= f.text_field :age %>
@@ -13,4 +14,6 @@
   <div class="field">
     <%= f.label :age %>
     <%= f.number_field :age %>
+  </div>
+  <%= render :partial => 'layouts/remove_nested',  :locals => {:f => f }  %>
   </div>

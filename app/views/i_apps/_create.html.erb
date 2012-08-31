@@ -43,6 +43,7 @@
   <h4>Pets</h4>
     <%= f.fields_for :pets do |u| %>
     <%= render :partial => 'pets/create',  :locals => {:f => u }  %>
+    <br/><%= link_to_add_fields "Add Pet", f, :pets %>
   <% end %>
 </fieldset>
 
