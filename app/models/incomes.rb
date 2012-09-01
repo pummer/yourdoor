@@ -6,5 +6,5 @@ class Incomes < ActiveRecord::Base
   validates_presence_of :proof_of_income
   validates :income, :presence => true,
             :numericality => true,
-            :format => { :with => /^\d{1,4}(\.\d{0,2})?$/ }
+            :format => { :with => /^\d{1,9}(\.\d{0,2})?$/ }
 end

@@ -19,20 +19,40 @@ class RApp < ActiveRecord::Base
   accepts_nested_attributes_for :landlord
   accepts_nested_attributes_for :listing_broker
   
+  #Application Creation Process
+  # 1. Make Transunion Call
+  # 2. Charge Credit Card
+  # 3. Persist to Database
   def create_application
     if valid?
     amount = 25.00
     description = "Transaction for #{self.property.address_1} #{self.property.address_2}, #{self.property.zip}."
-    self.i_apps.each do |i_app|
-      i_app.payment.charge_customer(amount, description)
-      
-      save! 
-    end   
+     begin
+      self.i_apps.each do |i_app|
+        i_app.payment.charge_customer(amount, description)  
+     end
+     rescue Stripe::InvalidRequestError => e
+        # TODO: In future, need to ensure if multiple charges are created at once, they are reversed
+        logger.error "Stripe error while creating customer: #{e.message}"
+        errors.add :base, "There was a problem with your credit card."
+        return false
+     rescue => e
+       logger.error "Capturing Any other errors: #{e.message}"
+       errors.add :base, "There was a problem with your credit card."
+       return false
     end
-    rescue Stripe::InvalidRequestError => e
-    logger.error "Stripe error while creating customer: #{e.message}"
-    errors.add :base, "There was a problem with your credit card."
-    false
+    
+    transaction do
+      begin
+      # Save Models
+        save!
+      rescue => e
+        logger.error "Application Error Occurred: #{e.message}"
+        errors.add :base, "There was a problem creating your application."
+        false
+      end
+    end
+    end
   end
   
 end

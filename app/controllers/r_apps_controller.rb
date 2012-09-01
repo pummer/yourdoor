@@ -33,6 +33,7 @@ class RAppsController < ApplicationController
 
 #Adam commenting this out 7:15PM 8/26 -- Andy let's talk about this please
     iapp = @r_app.i_apps.build
+
     iapp.pets.build
     iapp.employments.build
     iapp.emergency_contacts.build
@@ -42,6 +43,9 @@ class RAppsController < ApplicationController
 #    iapp.build
     iapp.build_payment
  #   iapp.build_
+ 
+    # Associate Current User to IApp
+    iapp.user = current_user
       
     respond_to do |format|
       format.html # new.html.erb

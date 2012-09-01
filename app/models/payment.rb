@@ -2,6 +2,9 @@ class Payment < ActiveRecord::Base
   attr_accessor :stripe_card_token
   attr_accessible :stripe_card_token
   
+  validates_presence_of :stripe_card_token
+  
+  
   def charge_customer(amount, description)
     
     if valid?
@@ -14,12 +17,6 @@ class Payment < ActiveRecord::Base
        )
        
        self.stripe_charge_token = charge.id
-       
-       #save!
-     end
-    rescue Stripe::InvalidRequestError => e
-     logger.error "Stripe error while creating customer: #{e.message}"
-     errors.add :base, "There was a problem with your credit card."
-     false
+    end    
   end
 end

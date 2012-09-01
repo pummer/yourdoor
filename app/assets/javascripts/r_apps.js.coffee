@@ -2,32 +2,18 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
+   $('input[type=submit]').attr('disabled', false) 
+   Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
+
+  
    $('#new_r_app').submit ->
      #Check to see if form is valid
      if $("form").isValid((window[$("form").attr("id")]).validators)
-       #Process Credit Card
        $('input[type=submit]').attr('disabled', true)
-       payment.processCard()
-     else
-       alert("Form Not Valid")
+       #payment.processCard()
      false
     
-     
-
- Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'))
-#  payment.setupForm()
-
 payment =
- 
- # setupForm: ->
-  #  $('#new_payment').submit ->
-   #   #$('input[type=submit]').attr('disabled', true)
-    #  if $('#card_number').length
-    #    payment.processCard()
-    #    false
-    #  else
-    #    false
-  
   processCard: ->
     card =
       number: $('#card_number').val()
