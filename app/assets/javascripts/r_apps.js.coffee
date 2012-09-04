@@ -10,7 +10,7 @@ jQuery ->
      #Check to see if form is valid
      if $("form").isValid((window[$("form").attr("id")]).validators)
        $('input[type=submit]').attr('disabled', true)
-       #payment.processCard()
+       payment.processCard()
      false
     
 payment =

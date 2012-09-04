@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120827020916) do
+ActiveRecord::Schema.define(:version => 20120904024641) do
+
+  create_table "credit_scores", :force => true do |t|
+    t.integer  "score"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "emergency_contacts", :force => true do |t|
     t.string   "name"
@@ -57,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20120827020916) do
     t.integer  "user_id"
     t.integer  "marital_status_id"
     t.integer  "r_app_id"
+    t.integer  "credit_score_id"
   end
 
   create_table "incomes", :force => true do |t|
@@ -80,6 +87,12 @@ ActiveRecord::Schema.define(:version => 20120827020916) do
     t.string   "mobile_phone"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "ooglers_types", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "payments", :force => true do |t|

@@ -12,4 +12,5 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, :case_sensitive => false
 
   has_many :i_apps
+  has_many :credit_scores
 end

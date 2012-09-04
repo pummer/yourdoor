@@ -1,6 +1,6 @@
 class IApp < ActiveRecord::Base
   attr_accessible :date_of_birth, :drivers_license_number, :drivers_license_state, :email, :first_name, :last_name, 
-    :middle_name, :phone, :social_security_number, :user_id, :marital_status_id, :r_app_id, :employments,
+    :middle_name, :phone, :social_security_number, :user_id, :marital_status_id, :credit_score_id, :r_app_id, :employments,
     :emergency_contacts, :personal_references, :pets, :previous_addresses,
     :vehicles
 
@@ -13,6 +13,7 @@ class IApp < ActiveRecord::Base
   has_many :previous_addresses, :class_name => 'PreviousAddresses', :dependent => :destroy
   has_many :vehicles, :class_name => 'Vehicles', :dependent => :destroy
   has_one :marital_status
+  has_one :credit_score
   belongs_to :r_app
   belongs_to :payment
   
