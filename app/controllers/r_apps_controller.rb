@@ -20,6 +20,13 @@ class RAppsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @r_app }
+      format.pdf do
+        render  :pdf => "file_name",
+                :template => 'r_apps/show.pdf.erb',
+                :layout => "pdf.html",
+                :show_as_html => params[:debug].present?
+
+      end
     end
   end
 

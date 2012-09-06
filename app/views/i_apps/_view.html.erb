@@ -48,20 +48,14 @@
 	TransUnion Score<br/>
 	<input class="span4" data-validate="true" disabled="disabled" id="r_app_listing_broker_attributes_name" 					name="r_app[listing_broker_attributes][name]" size="30" type="text" value="<%= score %>"> 
 </div>
+</fieldset>
 	
 	
-</fieldset>
-  <fieldset class="appsinside">
-  <h4>Pets</h4>
-  <%= f.fields_for :pets do |u| %>
-    <%= render :partial => 'pets/view',  :locals => {:f => u }  %>
-  <% end %>
-</fieldset>
 
 <fieldset class="appsinside">
   <h4>Employment History</h4>
   <%= f.fields_for :employments do |u| %>
-    <%= render :partial => 'employments/view',  :locals => {:f => u }  %>
+    <%= render :partial => 'employments/view.html.erb',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
@@ -69,14 +63,14 @@
 <fieldset class="appsinside">
   <h4>Current Income</h4>
     <%= f.fields_for :incomes do |u| %>
-    <%= render :partial => 'incomes/view',  :locals => {:f => u }  %>
+    <%= render :partial => 'incomes/view.html.erb',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
 <fieldset class="appsinside">
   <h4>Emergency Contacts</h4>
   <%= f.fields_for :emergency_contacts do |u| %>
-    <%= render :partial => 'emergency_contacts/view',  :locals => {:f => u }  %>
+    <%= render :partial => 'emergency_contacts/view.html.erb',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
@@ -85,13 +79,21 @@
 <fieldset class="appsinside">
   <h4>Personal References</h4>
     <%= f.fields_for :personal_references do |u| %>
-    <%= render :partial => 'personal_references/view',  :locals => {:f => u }  %>
+    <%= render :partial => 'personal_references/view.html.erb',  :locals => {:f => u }  %>
   <% end %>
 </fieldset>
 
 <fieldset class="appsinside">
   <h4>Previous Addresses</h4>
     <%= f.fields_for :previous_addresses do |u| %>
-    <%= render :partial => 'previous_addresses/view',  :locals => {:f => u }  %>
+    <%= render :partial => 'previous_addresses/view.html.erb',  :locals => {:f => u }  %>
   <% end %>
+</fieldset>
+
+</fieldset>
+<fieldset class="appsinside">
+<h4>Pets</h4>
+<%= f.fields_for :pets do |u| %>
+<%= render :partial => 'pets/view.html.erb',  :locals => {:f => u }  %>
+<% end %>
 </fieldset>

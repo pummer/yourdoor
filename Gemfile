@@ -64,3 +64,6 @@ gem 'stripe'
 
 # Client Side Validations
 gem 'client_side_validations'
+
+#PDFing
+gem 'wicked_pdf'
