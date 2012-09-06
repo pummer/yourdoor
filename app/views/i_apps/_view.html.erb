@@ -1,0 +1,97 @@
+   <%= f.hidden_field :user_id %>
+  <fieldset class="appssection">
+<h4>Personal Information</h4>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, :class => "span4", :disabled => true   %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name %>
+    <%= f.text_field :middle_name, :class => "span3", :disabled => true   %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, :class => "span4", :disabled => true   %>
+  </div><div class="field dln">
+    <%= f.label :drivers_license_number %>
+    <%= f.text_field :drivers_license_number, :class => "span2", :disabled => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :drivers_license_state %>
+    <%= f.text_field :drivers_license_state, :class => "span2", :disabled => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :social_security_number %>
+    <%= f.text_field :social_security_number, :class => "span2", :placeholder => "XXX-XX-XXXX", :disabled => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone, :class=> "span2", :placeholder => "XXX-XXX-XXXX", :disabled => true  %>
+  </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email, :class => "span4", :disabled => true    %>
+  </div>
+
+  <div class="field dob">
+    <%= f.label :date_of_birth %>
+    <%= f.date_select :date_of_birth, :start_year => 1900, :end_year => Time.now.year, :disabled => true  %>
+  </div>
+
+
+</fieldset>
+  <fieldset class="appsinside">
+  <h4>Credit Score</h4>
+	<% score = rand(600..800) %> 
+	<div class="field">
+	TransUnion Score<br/>
+	<input class="span4" data-validate="true" disabled="disabled" id="r_app_listing_broker_attributes_name" 					name="r_app[listing_broker_attributes][name]" size="30" type="text" value="<%= score %>"> 
+</div>
+	
+	
+</fieldset>
+  <fieldset class="appsinside">
+  <h4>Pets</h4>
+  <%= f.fields_for :pets do |u| %>
+    <%= render :partial => 'pets/view',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+<fieldset class="appsinside">
+  <h4>Employment History</h4>
+  <%= f.fields_for :employments do |u| %>
+    <%= render :partial => 'employments/view',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+
+<fieldset class="appsinside">
+  <h4>Current Income</h4>
+    <%= f.fields_for :incomes do |u| %>
+    <%= render :partial => 'incomes/view',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+<fieldset class="appsinside">
+  <h4>Emergency Contacts</h4>
+  <%= f.fields_for :emergency_contacts do |u| %>
+    <%= render :partial => 'emergency_contacts/view',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+
+
+<fieldset class="appsinside">
+  <h4>Personal References</h4>
+    <%= f.fields_for :personal_references do |u| %>
+    <%= render :partial => 'personal_references/view',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>
+
+<fieldset class="appsinside">
+  <h4>Previous Addresses</h4>
+    <%= f.fields_for :previous_addresses do |u| %>
+    <%= render :partial => 'previous_addresses/view',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>

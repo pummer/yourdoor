@@ -1,27 +1,46 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <b>Submission date:</b>
-  <%= @r_app.submission_date %>
-</p>
-
+Your application has been processed and sent to your real estate broker.</p>
 <p>
-  <b>Property:</b>
-  <%= @r_app.property %>
+	Your broker will contact you with the status of your application.
 </p>
-
 <p>
-  <b>Landlord:</b>
-  <%= @r_app.landlord %>
+ Thank you for using YourDoor!
 </p>
+<hr>
+<h1 id="appstitle">Apartment Rental Application</h1>
 
-<p>
-  <b>Listing Broker:</b>
-  <%= @r_app.listing_broker %>
-</p>
+<%= form_for @r_app, :validate => true, :disabled => true do |f| %>
+<fieldset class="appssection">
+<h4>Property Information</h4>
+	<%= f.fields_for :property, @r_app.property do |u| %>
+		<%= render :partial => 'properties/view',  :locals => {:u => u }  %>
+	<% end %>
+</fieldset>
+
+<!--- AP commenting this for now because we don't have landlords yet-->
+<%if false%>
+<fieldset class="appssection">
+<h4>Landlord</h4>
+	<%= f.fields_for :landlord,  @r_app.landlord do |u| %>
+		<%= render :partial => 'ooglers/view',  :locals => {:f => u }  %>
+	<% end %>
+</fieldset>
+<%end%>
+
+<fieldset class="appssection">
+<h4>Broker Information</h4>
+	<%= f.fields_for :listing_broker,  @r_app.listing_broker do |u| %>
+		<%= render :partial => 'ooglers/view',  :locals => {:f => u }  %>
+	<% end %>
+</fieldset>
+
+<div class="appsindividual">
+	<%= f.fields_for :i_apps,  @r_app.i_apps do |iapps| %>
+		<%= render :partial => 'i_apps/view',  :locals => {:f => iapps }  %>
+	<% end %>
+</div>
 
 
+<% end %>
 
 
-<%= link_to 'Edit', edit_r_app_path(@r_app) %> |
-<%= link_to 'Back', r_apps_path %>

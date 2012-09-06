@@ -13,7 +13,7 @@ class IApp < ActiveRecord::Base
   has_many :previous_addresses, :class_name => 'PreviousAddresses', :dependent => :destroy
   has_many :vehicles, :class_name => 'Vehicles', :dependent => :destroy
   has_one :marital_status
-  has_one :credit_score
+  belongs_to :credit_score
   belongs_to :r_app
   belongs_to :payment
   
