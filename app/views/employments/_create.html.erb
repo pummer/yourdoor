@@ -1,15 +1,35 @@
 
 <div class="field">
   <%= f.label :employer %>
-  <%= f.text_field :employer %>
+  <%= f.text_field :employer, :class => "span6" %>
 </div>
 <div class="field">
   <%= f.label :occupation %>
-  <%= f.text_field :occupation %>
+  <%= f.text_field :occupation, :class => "span5" %>
+</div>
+<div class="field">
+  <%= f.label :address %>
+  <%= f.text_field :address, :class => "span11" %>
+</div>
+<div class="field">
+  <%= f.label :city %>
+  <%= f.text_field :city, :class => "span4"  %>
+</div>
+<div class="field">
+  <%= f.label :state %>
+  <%= f.text_field :state, :class => "span4"  %>
+</div>
+<div class="field">
+  <%= f.label :zip %>
+  <%= f.text_field :zip, :class => "span3"  %>
+</div>
+<div class="field">
+  <%= f.label :years_employed %>
+  <%= f.number_field :years_employed, :min => 0 %>
 </div>
 <div class="field">
   <%= f.label :hours_per_week %>
-  <%= f.number_field :hours_per_week %>
+  <%= f.number_field :hours_per_week, :min => 0 %>
 </div>
 <div class="field">
   <%= f.label :supervisor_name %>
@@ -19,23 +39,5 @@
   <%= f.label :supervisor_phone %>
   <%= f.text_field :supervisor_phone %>
 </div>
-<div class="field">
-  <%= f.label :years_employed %>
-  <%= f.number_field :years_employed %>
-</div>
-<div class="field">
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-</div>
-<div class="field">
-  <%= f.label :city %>
-  <%= f.text_field :city %>
-</div>
-<div class="field">
-  <%= f.label :state %>
-  <%= f.text_field :state %>
-</div>
-<div class="field">
-  <%= f.label :zip %>
-  <%= f.text_field :zip %>
-</div>
+
+

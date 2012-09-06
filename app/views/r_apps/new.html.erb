@@ -1,3 +1,9 @@
+<p>
+Complete this form with information about the property you wish to apply for, the rental broker you are applying to, and your own personal information.</p>
+<p>
+	This application will be processed for a credit check and viewed by the rental broker and landlord before a decision is made on the status of your rental.
+</p>
+<hr>
 <h1 id="appstitle">Apartment Rental Application</h1>
 
 <%= form_for @r_app, :validate => true do |f| %>
@@ -14,21 +20,24 @@
   <% end %>
 
 <fieldset class="appssection">
-<h4>Property</h4>
+<h4>Property Information</h4>
 	<%= f.fields_for :property, @r_app.property do |u| %>
 		<%= render :partial => 'properties/create',  :locals => {:u => u }  %>
 	<% end %>
 </fieldset>
 
+<!--- AP commenting this for now because we don't have landlords yet-->
+<%if false%>
 <fieldset class="appssection">
 <h4>Landlord</h4>
 	<%= f.fields_for :landlord,  @r_app.landlord do |u| %>
 		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
 	<% end %>
 </fieldset>
+<%end%>
 
 <fieldset class="appssection">
-<h4>Broker</h4>
+<h4>Broker Information</h4>
 	<%= f.fields_for :listing_broker,  @r_app.listing_broker do |u| %>
 		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
 	<% end %>
@@ -41,8 +50,10 @@
 </div>
 
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-actions">
+	<em>Your credit card will be charged $25 to process this application and your credit report.</em><br><br>
+    <%= f.submit "Submit Application" , :class => "btn btn-success" %>
+	
   </div>
 
 <% end %>

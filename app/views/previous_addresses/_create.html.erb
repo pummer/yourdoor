@@ -5,35 +5,36 @@
 </div>
 <div class="field">
   <%= f.label :address_2 %>
-  <%= f.text_field :address_2 %>
+  <%= f.text_field :address_2, :class => "span11"  %>
 </div>
 <div class="field">
   <%= f.label :city %>
-  <%= f.text_field :city %>
+  <%= f.text_field :city, :class => "span4"  %>
 </div>
 <div class="field">
   <%= f.label :state %>
-  <%= f.text_field :state, :class => "span2" %>
+  <%= f.text_field :state, :class => "span4" %>
 </div>
 <div class="field">
   <%= f.label :zip %>
-  <%= f.text_field :zip %>
+  <%= f.text_field :zip, :class => "span2", :max_length => 5  %>
 </div>
-<div class="field">
-  <%= f.label :length_lived_months %>
-  <%= f.number_field :length_lived_months %>
-</div>
+
 <div class="field">
   <%= f.label :landlord_name %>
-  <%= f.text_field :landlord_name %>
+  <%= f.text_field :landlord_name, :class => "span4" %>
 </div>
 <div class="field">
   <%= f.label :landlord_phone %>
-  <%= f.text_field :landlord_phone %>
+  <%= f.text_field :landlord_phone, :class => "span3" %>
 </div>
 <div class="field">
   <%= f.label :reason_for_leaving %>
-  <%= f.text_field :reason_for_leaving %>
+  <%= f.text_field :reason_for_leaving, :class => "span4" %>
+</div>
+<div class="field">
+  <%= f.label :length_lived_months %>
+  <%= f.number_field :length_lived_months, :min => 0 %>
 </div>
 <div class="field">
   <%= f.label :rent_amount %>

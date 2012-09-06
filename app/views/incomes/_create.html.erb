@@ -1,7 +1,7 @@
 
 <div class="field">
   <%= f.label :income %>
-  <%= f.number_field :income %>
+  <%= f.number_field :income, :min => 0 %>
 </div>
 <div class="field">
   <%= f.label :source %>
