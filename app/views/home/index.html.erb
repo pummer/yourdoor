@@ -6,17 +6,19 @@
 
 	         <div class="row" style="padding-top: 150px;">
 	          <div class="span5">
-		
+				<div class="transbox">
+					<p>
 				<h1>Apply for your new apartment today.</h1>
-				<p>
+				</p><p>
 				<h3>YourDoor is a simple, easy way for prospective tenants to submit rental applications (with credit checks) to brokers and landlords.</h3></p>
-				<br/><br/>
+			
 				  <%= puts user_signed_in? %>
 				  <% if user_signed_in? %>
 				  		<%= render 'returning' %>
 				  <% else %>
 				  		<%= render 'new' %>
 				  <% end %>
+				</div>
 	          </div>
 	          <div class="span7">
 
@@ -52,7 +54,7 @@
 			</div>
 			<div class="row">
 				<div class="span3">
-			      <img src="http://placehold.it/260x180" alt="" class="thumbnail">
+					<%= link_to image_tag("/assets/step_1.jpg", :class => "thumbnail"), '/r_apps/new' %>
 			  </div>
 			  <div class="span9">
 				<div class="instruction">
@@ -72,26 +74,23 @@
 			  </div>
 
 				<div class="span3">
-			      <img src="http://placehold.it/260x180" alt="" class="thumbnail">
+			      <img src="/assets/step_2.jpg" alt="" class="thumbnail">
 			  </div>
 			</div>			
 			<div class="row clearfix">
 				<div class="span3">
-			      <img src="http://placehold.it/260x180" alt="" class="thumbnail">
+			      <img src="/assets/step_3.jpg" alt="" class="thumbnail">
 			  </div>
 			  <div class="span9">
 				<div class="instruction">
-				<h3>3)  Got Roommates?</h3>
-				If you're applying with other people, simply click the Add Roommate button, and we’ll send a link to your future co-inhabitant to fill out an application.  When finished, we’ll make sure the landlord gets all your information at the same time.
+				<h3>3)  Application sent to your broker!</h3>
+				Your application will be sent via email to your rental broker, complete with TransUnion credit report.  Your broker will inform you whether your application is accepted!
 				</div>
+
 			  </div>
-			  		
+
 			</div>
-			<% if !user_signed_in? %>
 
-				  		<%= render 'new' %>
-
-			  <% end %>	
 	        <footer>
 					<small>&copy; YourDoor 2012</small>
 	        </footer>

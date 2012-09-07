@@ -2252,7 +2252,7 @@ table .span12 {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url(/assets/glyphicons-halflings.png);
+  background-image: url(/assets/glyphicons-halflings-f6675c325532ec11a984d58e172b8e2a.png);
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -2263,7 +2263,7 @@ table .span12 {
 
 /* line 28, ../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194/gems/bootstrap-sass-2.0.4.0/vendor/assets/stylesheets/bootstrap/_sprites.scss */
 .icon-white {
-  background-image: url(/assets/glyphicons-halflings-white.png);
+  background-image: url(/assets/glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png);
 }
 
 /* line 32, ../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194/gems/bootstrap-sass-2.0.4.0/vendor/assets/stylesheets/bootstrap/_sprites.scss */
@@ -5700,7 +5700,7 @@ a.label:hover, a.badge:hover {
 
 /* line 11, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
 body {
-  padding-top: 130px;
+  padding-top: 120px;
 }
 
 /* line 12, ../../app/assets/stylesheets/bootstrap_and_overrides.css.scss */
@@ -6454,7 +6454,7 @@ body {
 
 /* line 7, ../../app/assets/stylesheets/home.css.scss */
 .content {
-  padding-top: 70px;
+  padding-top: 130px;
 }
 
 /* line 9, ../../app/assets/stylesheets/home.css.scss */
@@ -6478,37 +6478,34 @@ body {
   top: 0;
 }
 
-/* line 30, ../../app/assets/stylesheets/home.css.scss */
-.photobox .transbox {
-  width: 100%;
-  z-index: -2;
-  /* Fallback for web browsers that don't support RGBa */
-  background-color: black;
-  /* RGBa with 0.6 opacity */
-  background-color: rgba(0, 0, 0, 0.2);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-  padding: 10px;
+/* line 28, ../../app/assets/stylesheets/home.css.scss */
+.photobox h1 {
+  color: #eee;
 }
 
-/* line 43, ../../app/assets/stylesheets/home.css.scss */
+/* line 32, ../../app/assets/stylesheets/home.css.scss */
+.photobox h3 {
+  color: #eee;
+}
+
+/* line 37, ../../app/assets/stylesheets/home.css.scss */
+.photobox .transbox {
+  z-index: -2;
+  margin: 30px 50px;
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  /* For IE8 and earlier */
+}
+
+/* line 45, ../../app/assets/stylesheets/home.css.scss */
 .photobox .transbox p {
   margin: 30px 40px;
   font-weight: bold;
-  color: #fff;
+  color: #000000;
 }
 
-/* line 50, ../../app/assets/stylesheets/home.css.scss */
-.photobox h1 {
-  color: #fff;
-}
-
-/* line 55, ../../app/assets/stylesheets/home.css.scss */
-.photobox h3 {
-  color: #fff;
-}
-
-/* line 61, ../../app/assets/stylesheets/home.css.scss */
+/* line 52, ../../app/assets/stylesheets/home.css.scss */
 .instructions {
   border-top: 3px;
   border-color: black;
@@ -6521,19 +6518,19 @@ body {
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* line 74, ../../app/assets/stylesheets/home.css.scss */
+/* line 65, ../../app/assets/stylesheets/home.css.scss */
 .instructions h2 {
   text-align: center;
   padding-bottom: 20px;
 }
 
-/* line 80, ../../app/assets/stylesheets/home.css.scss */
+/* line 71, ../../app/assets/stylesheets/home.css.scss */
 .instructions .container .row .span9 .instruction {
   padding-top: 40px;
 }
 
 @media (max-width: 767px) {
-  /* line 85, ../../app/assets/stylesheets/home.css.scss */
+  /* line 76, ../../app/assets/stylesheets/home.css.scss */
   .instructions {
     padding-right: 20px;
   }
