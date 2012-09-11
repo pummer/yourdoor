@@ -7,9 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "YourDoor" %></title>
     <meta name="description" content="">
     <meta name="author" content="">
-
-	  <%= stylesheet_link_tag 'application', :media => "all" %>
-		  <%= wicked_pdf_stylesheet_link_tag "application" %>
+		  <%= wicked_pdf_stylesheet_link_tag "pdf" %>
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
 	<%= favicon_link_tag %>
@@ -24,7 +22,7 @@
     <header class="navbar navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
-          <%= render 'layouts/navigation.html.erb' %>
+          <%= wicked_pdf_image_tag "/assets/yd_logo_1.png" %>
         </div>
       </nav>
     </header>
