@@ -3,3 +3,9 @@
 
 en:
   hello: "Hello world"
+
+  en:
+    activerecord:
+      models:
+        r_app: "Rental Application"
+        i_app: "Rental Application"

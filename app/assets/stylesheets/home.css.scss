@@ -30,13 +30,13 @@ body { padding-top: 0px; }
 {
   width: 100%;
   z-index: -2;
-/* Fallback for web browsers that don't support RGBa */
-background-color: rgb(0, 0, 0);
-/* RGBa with 0.6 opacity */
-background-color: rgba(0, 0, 0, 0.4);
-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
--ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-padding: 10px;
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(0, 0, 0);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(0, 0, 0, 0.4);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  padding: 10px;
 }
 
 .photobox h1

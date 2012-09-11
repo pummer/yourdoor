@@ -66,7 +66,7 @@ RailsApp::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   #TODO:  Change this host for production!!!!!
-  config.action_mailer.default_url_options = { :host => 'example.com' }
+  config.action_mailer.default_url_options = { :host => 'beta.rentyourdoor.com' }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
   config.action_mailer.delivery_method = :smtp

@@ -67,3 +67,4 @@ gem 'client_side_validations'
 
 #PDFing
 gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary', "~> 0.9.9.1"
