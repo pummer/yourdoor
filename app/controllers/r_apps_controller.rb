@@ -87,8 +87,7 @@ class RAppsController < ApplicationController
     
     respond_to do |format|
       if @r_app.create_application
-        format.html { redirect_to @r_app, notice: 'R app was successfully created.' }
-        format.json { render json: @r_app, status: :created, location: @r_app }
+        
         
         pdf = render_to_string :pdf => "file_name",
                 :template => 'r_apps/show.pdf.erb',
@@ -105,7 +104,12 @@ class RAppsController < ApplicationController
                 end
 
 
-        RAppMailer.application_email(@r_app).deliver        
+        RAppMailer.application_email(@r_app).deliver
+        
+        
+        format.html { redirect_to @r_app }
+        format.json { render json: @r_app, status: :created, location: @r_app }
+
 
 
         
