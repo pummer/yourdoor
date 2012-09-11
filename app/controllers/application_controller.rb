@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
     '/r_apps/new'
   end
   
+  def after_sign_up_path_for(resource_or_scope)
+    "/r_apps/new"
+  end
+  
 end
