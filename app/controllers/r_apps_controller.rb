@@ -23,10 +23,13 @@ class RAppsController < ApplicationController
       format.pdf do
         render  :pdf => "file_name",
                 :template => 'r_apps/show.pdf.erb',
-                :layout => "pdf.html",
-                :show_as_html => params[:debug].present?
-
+                :layout => "pdf.pdf.erb",
+                :show_as_html => params[:debug].present?,
+                :disable_smart_shrinking => true,
+                :zoom => 0.5,
+                :dpi => 150
       end
+      
     end
   end
 
@@ -58,6 +61,25 @@ class RAppsController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @r_app }
     end
+    
+    
+    pdf = render_to_string :pdf => "file_name",
+            :template => 'r_apps/show.pdf.erb',
+            :layout => "pdf.pdf.erb",
+            :show_as_html => params[:debug].present?,
+            :disable_smart_shrinking => true,
+            :zoom => 0.5,
+            :dpi => 150
+
+  
+            save_path = Rails.root.join('pdfs',"Application_"+@r_app.id.to_s+'.pdf')
+            File.open(save_path, 'wb') do |file|
+              file << pdf
+            end
+    RAppMailer.application_email(@r_app).deliver
+    
+    
+    
   end
 
   # GET /r_apps/1/edit

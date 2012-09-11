@@ -1,5 +1,11 @@
 /*
- *= require application
+*= require bootstrap-responsive-nolarge
+*= require bootstrap_and_overrides
+*= require home
+*= require payments
+*= require properties
+*= require r_apps
  *= require_self
  */
 
+.content { padding-top: 0px; }

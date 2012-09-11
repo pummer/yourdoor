@@ -2257,7 +2257,7 @@ table .span12 {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url(/assets/glyphicons-halflings.png);
+  background-image: url(/assets/glyphicons-halflings-f6675c325532ec11a984d58e172b8e2a.png);
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -2268,7 +2268,7 @@ table .span12 {
 
 /* line 28, ../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194/gems/bootstrap-sass-2.0.4.2/vendor/assets/stylesheets/bootstrap/_sprites.scss */
 .icon-white {
-  background-image: url(/assets/glyphicons-halflings-white.png);
+  background-image: url(/assets/glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png);
 }
 
 /* line 32, ../../../../../../usr/local/rvm/gems/ruby-1.9.3-p194/gems/bootstrap-sass-2.0.4.2/vendor/assets/stylesheets/bootstrap/_sprites.scss */
@@ -6566,22 +6566,21 @@ h4 {
 fieldset {
   margin-top: 6px;
   border: 1px solid black;
-  page-break-after: auto;
 }
 
-/* line 34, ../../app/assets/stylesheets/r_apps.css.scss */
+/* line 33, ../../app/assets/stylesheets/r_apps.css.scss */
 .dob {
   clear: both;
   float: left;
 }
 
-/* line 39, ../../app/assets/stylesheets/r_apps.css.scss */
+/* line 38, ../../app/assets/stylesheets/r_apps.css.scss */
 .dln {
   clear: both;
   float: left;
 }
 
-/* line 44, ../../app/assets/stylesheets/r_apps.css.scss */
+/* line 43, ../../app/assets/stylesheets/r_apps.css.scss */
 .clearfix:after {
   content: ".";
   display: block;
@@ -6591,27 +6590,27 @@ fieldset {
   height: 0;
 }
 
-/* line 53, ../../app/assets/stylesheets/r_apps.css.scss */
+/* line 52, ../../app/assets/stylesheets/r_apps.css.scss */
 .clearfix {
   display: inline-block;
 }
 
-/* line 57, ../../app/assets/stylesheets/r_apps.css.scss */
+/* line 56, ../../app/assets/stylesheets/r_apps.css.scss */
 html[xmlns] .clearfix {
   display: block;
 }
 
-/* line 61, ../../app/assets/stylesheets/r_apps.css.scss */
+/* line 60, ../../app/assets/stylesheets/r_apps.css.scss */
 * html .clearfix {
   height: 1%;
 }
 
-/* line 65, ../../app/assets/stylesheets/r_apps.css.scss */
+/* line 64, ../../app/assets/stylesheets/r_apps.css.scss */
 .actions {
   margin-top: 15px;
 }
 
-/* line 69, ../../app/assets/stylesheets/r_apps.css.scss */
+/* line 68, ../../app/assets/stylesheets/r_apps.css.scss */
 #appstitle {
   text-align: center;
 }

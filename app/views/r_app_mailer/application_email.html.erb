@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <p>Hi <%= @r_app.listing_broker.name %>,</p>
+	<p>
+      You have received a rental application for <%= @r_app.property.address_1 %>.<br/></p><p>
+	  Please see the attached PDF file to view this rental application.
+    </p>
+    <p>Thanks for using YourDoor!</p>
+  </body>
+</html>
