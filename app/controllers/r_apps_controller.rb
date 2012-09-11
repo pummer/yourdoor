@@ -84,32 +84,35 @@ class RAppsController < ApplicationController
     # determine amount of money to charge customer (25 initially. 5 if later on)
     # May want to put this inside the R_App Model to make a truely skinny controller
     
-    pdf = render_to_string :pdf => "file_name",
-            :template => 'r_apps/show.pdf.erb',
-            :layout => "pdf.pdf.erb",
-            :show_as_html => params[:debug].present?,
-            :disable_smart_shrinking => true,
-            :zoom => 0.5,
-            :dpi => 150
-
-
-            save_path = Rails.root.join('pdfs',"Application_"+@r_app.id.to_s+'.pdf')
-            File.open(save_path, 'wb') do |file|
-              file << pdf
-            end
-    RAppMailer.application_email(@r_app).deliver
     
     respond_to do |format|
       if @r_app.create_application
         format.html { redirect_to @r_app, notice: 'R app was successfully created.' }
         format.json { render json: @r_app, status: :created, location: @r_app }
         
-        
+        pdf = render_to_string :pdf => "file_name",
+                :template => 'r_apps/show.pdf.erb',
+                :layout => "pdf.pdf.erb",
+                :show_as_html => params[:debug].present?,
+                :disable_smart_shrinking => true,
+                :zoom => 0.5,
+                :dpi => 150
+
+
+                save_path = Rails.root.join('pdfs',"Application_"+@r_app.id.to_s+'.pdf')
+                File.open(save_path, 'wb') do |file|
+                  file << pdf
+                end
+
+
+        RAppMailer.application_email(@r_app).deliver        
 
 
         
         
       else
+        
+
         format.html { render action: "new" }
         format.json { render json: @r_app.errors, status: :unprocessable_entity }
       end
