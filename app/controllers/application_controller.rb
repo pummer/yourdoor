@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_up_path_for(resource_or_scope)
-    "/r_apps/new"
+    '/r_apps/new'
   end
   
 end
