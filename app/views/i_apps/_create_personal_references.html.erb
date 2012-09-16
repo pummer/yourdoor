@@ -1,0 +1,11 @@
+<fieldset class="appsinside">
+  <h4>Personal References</h4>
+    <div class="nested">
+   <%= f.fields_for :personal_references do |u| %>
+   <fieldset>
+    <%= render :partial => 'personal_references/create',  :locals => {:f => u }  %>
+    </fieldset>
+  <% end %>
+  </div>
+        <%= link_to_add_fields "Add Personal Reference", f, :personal_references %>
+</fieldset>

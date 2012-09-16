@@ -1,0 +1,6 @@
+<fieldset class="appsinside">
+  <h4>Payment</h4>
+    <%= f.fields_for :payment do |u| %>
+    <%= render :partial => 'payments/create',  :locals => {:f => u }  %>
+  <% end %>
+</fieldset>

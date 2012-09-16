@@ -1,0 +1,11 @@
+<fieldset class="appsinside">
+  <h4>Emergency Contacts</h4>
+  <div class="nested">
+  <%= f.fields_for :emergency_contacts do |u| %>
+  <fieldset>
+    <%= render :partial => 'emergency_contacts/create',  :locals => {:f => u }  %>
+   </fieldset>
+  <% end %>
+  </div>
+     <%= link_to_add_fields "Add Emergency Contact", f, :emergency_contacts %>
+</fieldset>

@@ -1,0 +1,11 @@
+<fieldset class="appsinside">
+  <h4>Previous Addresses</h4>
+    <div class="nested">
+   <%= f.fields_for :previous_addresses do |u| %>
+   <fieldset>
+    <%= render :partial => 'previous_addresses/create',  :locals => {:f => u }  %>
+    </fieldset>
+  <% end %>
+  </div>
+        <%= link_to_add_fields "Add Address", f, :previous_addresses %>
+</fieldset>

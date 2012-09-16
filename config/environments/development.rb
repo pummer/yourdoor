@@ -53,4 +53,6 @@ RailsApp::Application.configure do
     password: "rent123123"
   }
   
+  config.assets.compile = true
+  
 end

@@ -50,6 +50,7 @@ class RAppsController < ApplicationController
     iapp.incomes.build
     iapp.personal_references.build
     iapp.previous_addresses.build
+    iapp.vehicles.build
 #    iapp.build
     iapp.build_payment
  #   iapp.build_

@@ -15,6 +15,8 @@ body { padding-top: 0px; }
 }
 
 
+
+
 .photobox {
 	background-image: url("/assets/main_bg.jpg")	;
 	background-size: auto 100%; 
@@ -79,3 +81,17 @@ body { padding-top: 0px; }
 
 	padding-right: 20px;
 }}
+
+.anchor  {
+  list-style: none outside none;
+}
+
+.loader, .msgBox {
+  display:none;
+}
+
+.actionBar a {
+  float: right;
+  margin: 10px;
+  padding: 5px;
+}

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<creditBureau xmlns="http://www.transunion.com/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.transunion.com/namespace">
+	<document>response</document>
+	<version>2.8</version>
+	<transactionControl>
+		<userRefNumber>20999</userRefNumber>
+		<subscriber>
+			<industryCode>R</industryCode>
+			<memberCode>02052649</memberCode>
+			<inquirySubscriberPrefixCode>0622</inquirySubscriberPrefixCode>
+		</subscriber>
+		<options>
+			<country>us</country>
+			<language>en</language>
+		</options>
+		<tracking>
+			<transactionTimeStamp>2012-09-10T21:34:20.391-05:00</transactionTimeStamp>
+		</tracking>
+	</transactionControl>
+	<product>
+		<code>07000</code>
+		<subject>
+			<number>1</number>
+			<subjectRecord>
+				<fileNumber>01</fileNumber>
+				<fileSummary>
+					<fileHitIndicator>regularHit</fileHitIndicator>
+					<ssnMatchIndicator>exact</ssnMatchIndicator>
+					<consumerStatementIndicator>false</consumerStatementIndicator>
+					<market>32</market>
+					<submarket>QU</submarket>
+					<creditDataStatus>
+						<suppressed>false</suppressed>
+						<doNotPromote>
+							<indicator>false</indicator>
+						</doNotPromote>
+						<freeze>
+							<indicator>false</indicator>
+						</freeze>
+						<minor>false</minor>
+						<disputed>false</disputed>
+					</creditDataStatus>
+					<inFileSinceDate estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">1983-10-23</inFileSinceDate>
+				</fileSummary>
+				<indicative>
+					<name source="file">
+						<person>
+							<first>ZELNINO</first>
+							<middle>XX</middle>
+							<last>WINTER</last>
+						</person>
+					</name>
+					<name source="file">
+						<qualifier>alsoKnownAs</qualifier>
+						<person>
+							<unparsed>SUMMER</unparsed>
+						</person>
+					</name>
+					<address source="file">
+						<status>current</status>
+						<qualifier>personal</qualifier>
+						<street>
+							<number>760</number>
+							<name>SPROUL</name>
+							<preDirectional>W</preDirectional>
+							<type>RD</type>
+						</street>
+						<location>
+							<city>FANTASY ISLAND</city>
+							<state>IL</state>
+							<zipCode>60750</zipCode>
+						</location>
+						<dateReported estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2009-01-16</dateReported>
+					</address>
+					<address source="file">
+						<status>previous</status>
+						<qualifier>personal</qualifier>
+						<street>
+							<number>555</number>
+							<name>ADAMS</name>
+							<preDirectional>W</preDirectional>
+							<type>ST</type>
+						</street>
+						<location>
+							<city>CHICAGO</city>
+							<state>IL</state>
+							<zipCode>60661</zipCode>
+						</location>
+						<dateReported estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2003-12-24</dateReported>
+					</address>
+					<socialSecurity source="file">
+						<number>666125812</number>
+					</socialSecurity>
+					<dateOfBirth estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false" source="file">1967-02-01</dateOfBirth>
+					<employment source="file">
+						<employer>
+							<unparsed>AJILON</unparsed>
+						</employer>
+						<occupation>IT</occupation>
+						<dateHired estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2006-11-01</dateHired>
+						<dateOnFileSince estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-01</dateOnFileSince>
+					</employment>
+					<employment source="file">
+						<employer>
+							<unparsed>AJILON</unparsed>
+						</employer>
+						<occupation>IT</occupation>
+						<dateHired estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2006-11-01</dateHired>
+						<dateOnFileSince estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-01</dateOnFileSince>
+					</employment>
+				</indicative>
+				<consumerFileData>
+					<statement>
+						<text>NEVER SAY MOE THAN IS NECESSARY</text>
+					</statement>
+				</consumerFileData>
+				<custom>
+					<credit>
+						<trade>
+							<subscriber>
+								<industryCode>R</industryCode>
+								<memberCode>060LA001</memberCode>
+								<name>
+									<unparsed>MT W VLY MHP</unparsed>
+								</name>
+							</subscriber>
+							<portfolioType>open</portfolioType>
+							<ECOADesignator>individual</ECOADesignator>
+							<dateOpened estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2007-04-30</dateOpened>
+							<dateEffective estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-01</dateEffective>
+							<currentBalance>000001849</currentBalance>
+							<highCredit>000001849</highCredit>
+							<creditLimit>000002500</creditLimit>
+							<accountRating>09</accountRating>
+							<remark>
+								<code>PRL</code>
+								<type>affiliate</type>
+							</remark>
+							<pastDue>000001849</pastDue>
+							<paymentHistory>
+								<maxDelinquency>
+									<earliest>false</earliest>
+								</maxDelinquency>
+							</paymentHistory>
+							<updateMethod>locked</updateMethod>
+						</trade>
+						<trade>
+							<subscriber>
+								<industryCode>B</industryCode>
+								<memberCode>06613014</memberCode>
+								<name>
+									<unparsed>PNC BANK</unparsed>
+								</name>
+							</subscriber>
+							<portfolioType>installment</portfolioType>
+							<ECOADesignator>individual</ECOADesignator>
+							<dateOpened estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2010-03-24</dateOpened>
+							<dateEffective estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-01</dateEffective>
+							<currentBalance>000008677</currentBalance>
+							<highCredit>000009005</highCredit>
+							<accountRating>02</accountRating>
+							<terms>
+								<paymentFrequency>monthly</paymentFrequency>
+								<paymentScheduleMonthCount>60</paymentScheduleMonthCount>
+								<scheduledMonthlyPayment>000000333</scheduledMonthlyPayment>
+							</terms>
+							<paymentHistory>
+								<maxDelinquency>
+									<earliest>false</earliest>
+								</maxDelinquency>
+								<paymentPattern>
+									<startDate estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-08-01</startDate>
+									<text>21X11X111X11111X11111</text>
+								</paymentPattern>
+								<historicalCounters>
+									<monthsReviewedCount>21</monthsReviewedCount>
+									<late30DaysTotal>01</late30DaysTotal>
+									<late60DaysTotal>00</late60DaysTotal>
+									<late90DaysTotal>00</late90DaysTotal>
+								</historicalCounters>
+							</paymentHistory>
+							<updateMethod>manual</updateMethod>
+						</trade>
+						<trade>
+							<subscriber>
+								<industryCode>B</industryCode>
+								<memberCode>0860V001</memberCode>
+								<name>
+									<unparsed>EQUICREDIT</unparsed>
+								</name>
+							</subscriber>
+							<portfolioType>mortgage</portfolioType>
+							<ECOADesignator>jointContractLiability</ECOADesignator>
+							<dateOpened estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2006-05-08</dateOpened>
+							<dateEffective estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-01</dateEffective>
+							<currentBalance>000000100</currentBalance>
+							<highCredit>000000104</highCredit>
+							<accountRating>01</accountRating>
+							<terms>
+								<paymentFrequency>monthly</paymentFrequency>
+								<paymentScheduleMonthCount>168</paymentScheduleMonthCount>
+								<scheduledMonthlyPayment>000000967</scheduledMonthlyPayment>
+							</terms>
+							<account>
+								<type>CV</type>
+							</account>
+							<pastDue>000000000</pastDue>
+							<paymentHistory>
+								<maxDelinquency>
+									<earliest>false</earliest>
+								</maxDelinquency>
+								<paymentPattern>
+									<startDate estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-08-01</startDate>
+									<text>1111XXX111111111111X1111111111X1111111111111111</text>
+								</paymentPattern>
+								<historicalCounters>
+									<monthsReviewedCount>48</monthsReviewedCount>
+									<late30DaysTotal>00</late30DaysTotal>
+									<late60DaysTotal>00</late60DaysTotal>
+									<late90DaysTotal>00</late90DaysTotal>
+								</historicalCounters>
+							</paymentHistory>
+							<updateMethod>manual</updateMethod>
+						</trade>
+						<trade>
+							<subscriber>
+								<industryCode>B</industryCode>
+								<memberCode>0728P546</memberCode>
+								<name>
+									<unparsed>MELLON BK-E</unparsed>
+								</name>
+							</subscriber>
+							<portfolioType>revolving</portfolioType>
+							<ECOADesignator>individual</ECOADesignator>
+							<dateOpened estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2004-02-04</dateOpened>
+							<dateEffective estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-01</dateEffective>
+							<currentBalance>000000657</currentBalance>
+							<highCredit>000001200</highCredit>
+							<creditLimit>000001500</creditLimit>
+							<accountRating>01</accountRating>
+							<pastDue>000000000</pastDue>
+							<paymentHistory>
+								<maxDelinquency>
+									<earliest>false</earliest>
+								</maxDelinquency>
+								<paymentPattern>
+									<startDate estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-08-01</startDate>
+									<text>111111111111111111111111111111111111111111111111</text>
+								</paymentPattern>
+								<historicalCounters>
+									<monthsReviewedCount>48</monthsReviewedCount>
+									<late30DaysTotal>00</late30DaysTotal>
+									<late60DaysTotal>00</late60DaysTotal>
+									<late90DaysTotal>00</late90DaysTotal>
+								</historicalCounters>
+							</paymentHistory>
+							<updateMethod>manual</updateMethod>
+						</trade>
+						<trade>
+							<subscriber>
+								<industryCode>B</industryCode>
+								<memberCode>01597029</memberCode>
+								<name>
+									<unparsed>BK OF AMER</unparsed>
+								</name>
+							</subscriber>
+							<portfolioType>revolving</portfolioType>
+							<ECOADesignator>individual</ECOADesignator>
+							<dateOpened estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2009-10-22</dateOpened>
+							<dateEffective estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-01</dateEffective>
+							<currentBalance>000000000</currentBalance>
+							<highCredit>000001005</highCredit>
+							<creditLimit>000002500</creditLimit>
+							<accountRating>01</accountRating>
+							<paymentHistory>
+								<maxDelinquency>
+									<earliest>false</earliest>
+								</maxDelinquency>
+								<paymentPattern>
+									<startDate estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-08-01</startDate>
+									<text>11111111111111111111111111111111</text>
+								</paymentPattern>
+								<historicalCounters>
+									<monthsReviewedCount>25</monthsReviewedCount>
+									<late30DaysTotal>00</late30DaysTotal>
+									<late60DaysTotal>00</late60DaysTotal>
+									<late90DaysTotal>00</late90DaysTotal>
+								</historicalCounters>
+							</paymentHistory>
+							<updateMethod>manual</updateMethod>
+						</trade>
+						<trade>
+							<subscriber>
+								<industryCode>V</industryCode>
+								<memberCode>01066024</memberCode>
+								<name>
+									<unparsed>CRESTAR BANK</unparsed>
+								</name>
+							</subscriber>
+							<portfolioType>installment</portfolioType>
+							<ECOADesignator>individual</ECOADesignator>
+							<dateOpened estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2004-04-30</dateOpened>
+							<dateEffective estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2011-07-13</dateEffective>
+							<dateClosed estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2011-07-18</dateClosed>
+							<closedIndicator>normal</closedIndicator>
+							<currentBalance>000000000</currentBalance>
+							<highCredit>000002623</highCredit>
+							<accountRating>01</accountRating>
+							<remark>
+								<code>CLO</code>
+								<type>affiliate</type>
+							</remark>
+							<terms>
+								<paymentFrequency>monthly</paymentFrequency>
+								<paymentScheduleMonthCount>64</paymentScheduleMonthCount>
+								<scheduledMonthlyPayment>000000051</scheduledMonthlyPayment>
+							</terms>
+							<account>
+								<type>ST</type>
+							</account>
+							<pastDue>000000000</pastDue>
+							<paymentHistory>
+								<maxDelinquency>
+									<earliest>false</earliest>
+								</maxDelinquency>
+								<paymentPattern>
+									<startDate estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2011-06-13</startDate>
+									<text>XXXXXXXXXXXXXX111111111111111111</text>
+								</paymentPattern>
+								<historicalCounters>
+									<monthsReviewedCount>48</monthsReviewedCount>
+									<late30DaysTotal>00</late30DaysTotal>
+									<late60DaysTotal>00</late60DaysTotal>
+									<late90DaysTotal>00</late90DaysTotal>
+								</historicalCounters>
+							</paymentHistory>
+							<updateMethod>manual</updateMethod>
+						</trade>
+						<collection>
+							<subscriber>
+								<industryCode>Y</industryCode>
+								<memberCode>098MC001</memberCode>
+								<name>
+									<unparsed>RECOVERY SYS</unparsed>
+								</name>
+							</subscriber>
+							<portfolioType>open</portfolioType>
+							<ECOADesignator>individual</ECOADesignator>
+							<dateOpened estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2010-11-07</dateOpened>
+							<dateEffective estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-01</dateEffective>
+							<currentBalance>000000293</currentBalance>
+							<original>
+								<creditGrantor>
+									<unparsed>MEDICAL</unparsed>
+								</creditGrantor>
+								<creditorClassification>medicalOrHealthCare</creditorClassification>
+								<balance>000000293</balance>
+							</original>
+							<pastDue>000000293</pastDue>
+							<accountRating>9B</accountRating>
+							<remark>
+								<code>CLA</code>
+								<type>affiliate</type>
+							</remark>
+							<updateMethod>locked</updateMethod>
+						</collection>
+						<publicRecord>
+							<type>PC</type>
+							<subscriber>
+								<industryCode>Z</industryCode>
+								<memberCode>05048107</memberCode>
+							</subscriber>
+							<docketNumber>97000002040</docketNumber>
+							<attorney>N LEVI</attorney>
+							<plaintiff>FORD MOTOR CREDIT</plaintiff>
+							<dateReported estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2011-04-30</dateReported>
+							<dateFiled estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2011-04-30</dateFiled>
+							<datePaid estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2011-12-03</datePaid>
+							<liabilities>000000876</liabilities>
+							<ECOADesignator>individual</ECOADesignator>
+							<source>
+								<type>circuit</type>
+							</source>
+						</publicRecord>
+						<inquiry>
+							<ECOADesignator>individual</ECOADesignator>
+							<subscriber>
+								<industryCode>R</industryCode>
+								<memberCode>02052649</memberCode>
+								<inquirySubscriberPrefixCode>06TR</inquirySubscriberPrefixCode>
+								<name>
+									<unparsed>GO HOME LLC</unparsed>
+								</name>
+							</subscriber>
+							<date estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-10</date>
+						</inquiry>
+						<inquiry>
+							<ECOADesignator>individual</ECOADesignator>
+							<subscriber>
+								<industryCode>B</industryCode>
+								<memberCode>02382255</memberCode>
+								<inquirySubscriberPrefixCode>40LO</inquirySubscriberPrefixCode>
+								<name>
+									<unparsed>HSBC</unparsed>
+								</name>
+							</subscriber>
+							<date estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2012-09-04</date>
+						</inquiry>
+						<inquiry>
+							<ECOADesignator>individual</ECOADesignator>
+							<subscriber>
+								<industryCode>X</industryCode>
+								<memberCode>00000102</memberCode>
+								<inquirySubscriberPrefixCode>06US</inquirySubscriberPrefixCode>
+								<name>
+									<unparsed>TEST SUBCODE</unparsed>
+								</name>
+							</subscriber>
+							<date estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2010-07-05</date>
+						</inquiry>
+						<inquiry>
+							<ECOADesignator>individual</ECOADesignator>
+							<subscriber>
+								<industryCode>X</industryCode>
+								<memberCode>00000102</memberCode>
+								<inquirySubscriberPrefixCode>06US</inquirySubscriberPrefixCode>
+								<name>
+									<unparsed>TEST SUBCODE</unparsed>
+								</name>
+							</subscriber>
+							<date estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2010-05-13</date>
+						</inquiry>
+						<inquiry>
+							<ECOADesignator>individual</ECOADesignator>
+							<subscriber>
+								<industryCode>X</industryCode>
+								<memberCode>00000102</memberCode>
+								<inquirySubscriberPrefixCode>06US</inquirySubscriberPrefixCode>
+								<name>
+									<unparsed>TEST SUBCODE</unparsed>
+								</name>
+							</subscriber>
+							<date estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2009-12-08</date>
+						</inquiry>
+						<inquiry>
+							<ECOADesignator>individual</ECOADesignator>
+							<subscriber>
+								<industryCode>X</industryCode>
+								<memberCode>00000102</memberCode>
+								<inquirySubscriberPrefixCode>06US</inquirySubscriberPrefixCode>
+								<name>
+									<unparsed>TEST SUBCODE</unparsed>
+								</name>
+							</subscriber>
+							<date estimatedCentury="false" estimatedDay="false" estimatedMonth="false" estimatedYear="false">2009-09-11</date>
+						</inquiry>
+					</credit>
+				</custom>
+				<addOnProduct>
+					<code>00Q88</code>
+					<status>delivered</status>
+					<scoreModel>
+						<score>
+							<results>+558</results>
+							<derogatoryAlert>false</derogatoryAlert>
+							<fileInquiriesImpactedScore>false</fileInquiriesImpactedScore>
+							<factors>
+								<factor>
+									<rank>1</rank>
+									<code>038</code>
+								</factor>
+								<factor>
+									<rank>2</rank>
+									<code>013</code>
+								</factor>
+								<factor>
+									<rank>3</rank>
+									<code>018</code>
+								</factor>
+								<factor>
+									<rank>4</rank>
+									<code>027</code>
+								</factor>
+							</factors>
+						</score>
+					</scoreModel>
+				</addOnProduct>
+			</subjectRecord>
+		</subject>
+	</product>
+</creditBureau>

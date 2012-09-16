@@ -24,6 +24,7 @@ class IApp < ActiveRecord::Base
   attr_accessible :incomes_attributes
   attr_accessible :personal_references_attributes
   attr_accessible :previous_addresses_attributes
+  attr_accessible :vehicles_attributes
   
   
   accepts_nested_attributes_for :employments

@@ -18,43 +18,75 @@ Complete this form with information about the property you wish to apply for, th
       </ul>
     </div>
   <% end %>
+  
+<ul>
+	<li><a href="#step-1"></a></li>
+	<li><a href="#step-2"></a></li>
+	<li><a href="#step-3"></a></li>
+	<li><a href="#step-4"></a></li>
+	<li><a href="#step-5"></a></li>
+	<li><a href="#step-6"></a></li>
+	<li><a href="#step-7"></a></li>
+	<li><a href="#step-8"></a></li>
+	<li><a href="#step-9"></a></li>
+</ul>
 
-<fieldset class="appssection">
-<h4>Property Information</h4>
-	<%= f.fields_for :property, @r_app.property do |u| %>
-		<%= render :partial => 'properties/create',  :locals => {:u => u }  %>
-	<% end %>
-</fieldset>
+<!-- BEGIN STEP 1 -->
+	<div id="step-1">
+		<%= render :partial => 'create_r_app',  :locals => {:f => f }   %>
+	</div>
+<!-- END STEP 1 -->
 
-<!--- AP commenting this for now because we don't have landlords yet-->
-<%if false%>
-<fieldset class="appssection">
-<h4>Landlord</h4>
-	<%= f.fields_for :landlord,  @r_app.landlord do |u| %>
-		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
-	<% end %>
-</fieldset>
-<%end%>
-
-<fieldset class="appssection">
-<h4>Broker Information</h4>
-	<%= f.fields_for :listing_broker,  @r_app.listing_broker do |u| %>
-		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
-	<% end %>
-</fieldset>
-
-<div class="appsindividual">
 	<%= f.fields_for :i_apps,  @r_app.i_apps do |iapps| %>
-		<%= render :partial => 'i_apps/create',  :locals => {:f => iapps }  %>
-	<% end %>
-</div>
-
-
-  <div class="form-actions">
-	<em>Your credit card will be charged $25 to process this application and your credit report.</em><br><br>
-    <%= f.submit "Submit Application" , :class => "btn btn-success" %>
 	
-  </div>
+		<!-- BEGIN STEP 2 -->
+			<div id="step-2">
+				<%= render :partial => 'i_apps/create_personal_information',  :locals => {:f => iapps }  %>
+			</div>
+		<!-- END STEP 2 -->
+		<!-- BEGIN STEP 3 -->
+			<div id="step-3">
+				<%= render :partial => 'i_apps/create_vehicles',  :locals => {:f => iapps }  %>
+			</div>
+		<!-- END STEP 3 -->
+		<!-- BEGIN STEP 4 -->
+			<div id="step-4">
+				<%= render :partial => 'i_apps/create_previous_employments',  :locals => {:f => iapps }  %>
+			</div>
+		<!-- END STEP 4 -->	
+		
+		<!-- BEGIN STEP 5 -->
+			<div id="step-5">
+				<%= render :partial => 'i_apps/create_previous_addresses',  :locals => {:f => iapps }  %>
+			</div>
+		<!-- END STEP 5 -->
+		
+		<!-- BEGIN STEP 6 -->
+			<div id="step-6">
+				<%= render :partial => 'i_apps/create_financial_history',  :locals => {:f => iapps }  %>
+			</div>
+		<!-- END STEP 6 -->
+		
+		<!-- BEGIN STEP 7 -->
+			<div id="step-7">
+				<%= render :partial => 'i_apps/create_emergency_contacts',  :locals => {:f => iapps }  %>
+			</div>
+		<!-- END STEP 7 -->
+		
+		<!-- BEGIN STEP 8 -->
+			<div id="step-8">
+				<%= render :partial => 'i_apps/create_personal_references',  :locals => {:f => iapps }  %>
+			</div>
+		<!-- END STEP 8 -->
+		
+		<!-- BEGIN STEP 9 -->
+			<div id="step-9">
+				<%= render :partial => 'i_apps/create_payment',  :locals => {:f => iapps }  %>
+			</div>
+		<!-- END STEP 9 -->	
+		
+	<% end %>
+
+
 
 <% end %>
-<%= link_to 'Back', r_apps_path %>

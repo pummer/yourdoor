@@ -1,0 +1,11 @@
+<fieldset class="appsinside">
+  <h4>Employment History</h4>
+  <div class="nested">
+  <%= f.fields_for :employments do |u| %>
+  	<fieldset>
+    <%= render :partial => 'employments/create',  :locals => {:f => u }  %>
+    </fieldset>
+  <% end %>
+  </div>
+         <%= link_to_add_fields "Add Employment", f, :employments %>
+</fieldset>

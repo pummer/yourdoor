@@ -17,3 +17,5 @@
 
 #ignore all pdfs
 /pdfs
+*.pem
+*.p12

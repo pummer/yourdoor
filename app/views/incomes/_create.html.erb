@@ -11,3 +11,5 @@
   <%= f.label :proof_of_income %>
   <%= f.check_box :proof_of_income %>
 </div>
+<%= f.hidden_field :_destroy %>
+<%= link_to "Remove Income", '#', class: "remove_fields" %>

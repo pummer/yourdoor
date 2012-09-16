@@ -1,0 +1,11 @@
+<fieldset class="appsinside">
+  <h4>Current Income</h4>
+  <div class="nested">
+    <%= f.fields_for :incomes do |u| %>
+    <fieldset>
+    <%= render :partial => 'incomes/create',  :locals => {:f => u }  %>
+    </fieldset>
+  <% end %>
+  </div>
+   <%= link_to_add_fields "Add Address", f, :previous_addresses %>
+</fieldset>

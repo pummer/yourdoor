@@ -1,4 +1,3 @@
- <div class="fields">
  <div class="field">
     <%= f.label :age %>
     <%= f.text_field :age %>
@@ -11,4 +10,5 @@
     <%= f.label :indoor %>
     <%= f.check_box :indoor %>
   </div>
-  </div>
+  <%= f.hidden_field :_destroy %>
+  <%= link_to "Remove Pet", '#', class: "remove_fields" %>

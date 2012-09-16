@@ -1,0 +1,23 @@
+<fieldset class="appssection">
+<h4>Property Information</h4>
+	<%= f.fields_for :property do |u| %>
+		<%= render :partial => 'properties/create',  :locals => {:u => u }  %>
+	<% end %>
+</fieldset>
+
+<!--- AP commenting this for now because we don't have landlords yet-->
+<%if false%>
+<fieldset class="appssection">
+<h4>Landlord</h4>
+	<%= f.fields_for :landlord do |u| %>
+		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
+	<% end %>
+</fieldset>
+<%end%>
+
+<fieldset class="appssection">
+<h4>Broker Information</h4>
+	<%= f.fields_for :listing_broker do |u| %>
+		<%= render :partial => 'ooglers/create',  :locals => {:f => u }  %>
+	<% end %>
+</fieldset>
